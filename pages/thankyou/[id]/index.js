@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { ThreeIcon } from "../../../components/3dIcon";
+import { ThreeIcon } from "../../../components/ThreeIcon";
 
 const participant = ({ participant }) => {
     return (
