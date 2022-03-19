@@ -1,8 +1,9 @@
+import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+export default function Home({ participantIds }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -16,8 +17,27 @@ export default function Home() {
                 <h1 className={styles.title}>
                     TODO
                 </h1>
-            </main>
 
-        </div>
+                {participantIds.map(id => {
+                    return (
+                        <div>
+                            <Link href="/thankyou/[id]" as={`/thankyou/${id}`}>
+                                <a>{id}</a>
+                            </Link>
+                        </div>
+                    )
+                }
+                )}
+            </main>
+        </div >
     )
+}
+
+export async function getStaticProps() {
+    const req = await fetch(`http://localhost:3000/participants/ids.json`);
+    const data = await req.json();
+
+    return {
+        props: { participantIds: data }
+    }
 }
