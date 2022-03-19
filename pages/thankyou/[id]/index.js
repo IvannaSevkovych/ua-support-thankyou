@@ -1,5 +1,5 @@
-import Head from "next/head"
-
+import Head from "next/head";
+import { ThreeIcon } from "../../../components/3dIcon";
 
 const participant = ({ participant }) => {
     return (
@@ -12,6 +12,8 @@ const participant = ({ participant }) => {
             <div>
                 Participant {participant.id}
             </div>
+
+            <ThreeIcon></ThreeIcon>
         </>
     )
 }
