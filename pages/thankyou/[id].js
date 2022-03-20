@@ -30,7 +30,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-    const req = await fetch(`http://localhost:3000/participants/ids.json`);
+    const req = await fetch(`http://localhost:3000/participants/_ids.json`);
     const data = await req.json();
 
     const paths = data.map( participantId => {

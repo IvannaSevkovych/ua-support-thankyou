@@ -34,7 +34,7 @@ export default function Home({ participantIds }) {
 }
 
 export async function getStaticProps() {
-    const req = await fetch(`http://localhost:3000/participants/ids.json`);
+    const req = await fetch(`http://localhost:3000/participants/_ids.json`);
     const data = await req.json();
 
     return {

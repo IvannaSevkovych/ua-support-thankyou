@@ -35,7 +35,7 @@ function IconPlane({ id, iconFile, ...threeProps }) {
             {...threeProps}
             ref={ref}
         >
-            <planeGeometry args={[1, 1, 40, 40]} />
+            <planeGeometry args={[1, 1, 200, 200]} />
             <threeIconMaterial />
         </mesh>
     )
