@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { Canvas, useFrame, extend } from '@react-three/fiber'
-import { PerspectiveCamera, shaderMaterial, OrbitControls } from '@react-three/drei'
+import { shaderMaterial, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import styles from '../styles/ThreeIcon.module.css'
 
@@ -20,7 +20,7 @@ function IconPlane({ iconFile, ...threeProps }) {
         fragment,
         (material) => {
             material.transparent = true;
-            material.wireframe = true;
+            // material.wireframe = true;
         }
     )
     extend({ ThreeIconMaterial })
@@ -29,7 +29,7 @@ function IconPlane({ iconFile, ...threeProps }) {
     const ref = useRef()
 
     // Subscribe this component to the render-loop, rotate the mesh every frame
-    useFrame((state, delta) => (ref.current.rotation.x += 0.00))
+    useFrame((state, delta) => (ref.current.material.uniforms.time.value += delta))
 
     // Return the view, these are regular Threejs elements expressed in JSX
     return (
