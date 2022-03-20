@@ -14,7 +14,7 @@ const participant = ({ participant }) => {
             <div>
                 Participant {participant.id}
 
-                <p>{participant.text}</p>
+                <div className={styles.text} dangerouslySetInnerHTML={{__html: participant.text}} />
             </div>
 
             <ThreeIcons {...participant}></ThreeIcons>

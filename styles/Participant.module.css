@@ -3,3 +3,13 @@
     height: 100vh;
     display: flex;
 }
+
+.text > a {
+    font-weight: bold;
+    color: red;
+    transition: color 300ms ease;
+}
+
+.text > a:hover {
+    color: blue;
+}
