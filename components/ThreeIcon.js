@@ -1,6 +1,6 @@
 import { useRef } from 'react'
 import { Canvas, useFrame, extend } from '@react-three/fiber'
-import { PerspectiveCamera, shaderMaterial } from '@react-three/drei'
+import { PerspectiveCamera, shaderMaterial, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 
 import vertex from './glsl/vertex.glsl'
@@ -14,7 +14,11 @@ function IconPlane({ id, iconFile, ...threeProps }) {
             iconTexture: new THREE.TextureLoader().load(`/assets/${iconFile}`)
         },
         vertex,
-        fragment
+        fragment,
+        (material) => {
+            material.transparent = true;
+            material.wireframe = true;
+        }
     )
     extend({ ThreeIconMaterial })
 
@@ -30,7 +34,7 @@ function IconPlane({ id, iconFile, ...threeProps }) {
             {...threeProps}
             ref={ref}
         >
-            <planeGeometry args={[1, 1, 20, 20]} />
+            <planeGeometry args={[1, 1, 40, 40]} />
             <threeIconMaterial />
         </mesh>
     )
@@ -38,10 +42,12 @@ function IconPlane({ id, iconFile, ...threeProps }) {
 
 export const ThreeIcon = (props) => {
     return (
-        <Canvas>
-            <PerspectiveCamera makeDefault>
-                <IconPlane position={[0, 0, -1]} {...props} />
-            </PerspectiveCamera>
+        <Canvas camera={{ position: [0, 0, 1] }}>
+            <color attach="background" args={["black"]} />
+            {/* <PerspectiveCamera makeDefault> */}
+                <IconPlane position={[0, 0, 0]} {...props} />
+            {/* </PerspectiveCamera> */}
+            <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
         </Canvas>
     )
 }
