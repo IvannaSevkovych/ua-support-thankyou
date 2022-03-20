@@ -1,7 +1,7 @@
 import Head from "next/head";
-import { ThreeIcon } from "../../../components/ThreeIcon";
+import { ThreeIcon } from "../../components/ThreeIcon";
 
-import styles from '../../../styles/Participant.module.css'
+import styles from '../../styles/Participant.module.css'
 
 const participant = ({ participant }) => {
     return (
