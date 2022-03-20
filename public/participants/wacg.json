@@ -1,4 +1,4 @@
 {
     "id" : "wacg",
-    "iconFile": "apple/money-bag.png"
+    "iconFiles": ["apple/money-bag.png"]
 }

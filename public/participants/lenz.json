@@ -1,4 +1,4 @@
 {
     "id" : "lenz",
-    "iconFile": "apple/automobile.png"
+    "iconFiles": ["apple/automobile.png"]
 }

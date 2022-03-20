@@ -1,4 +1,4 @@
 {
     "id" : "florian_beck",
-    "iconFile": "joypixels/syringe_lg.png"
+    "iconFiles": ["joypixels/syringe_lg.png"]
 }

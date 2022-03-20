@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { ThreeIcon } from "../../components/ThreeIcon";
+import { ThreeIcons } from "../../components/ThreeIcon";
 
 import styles from '../../styles/Participant.module.css'
 
@@ -15,7 +15,7 @@ const participant = ({ participant }) => {
                 Participant {participant.id}
             </div>
 
-            <ThreeIcon {...participant}></ThreeIcon>
+            <ThreeIcons {...participant}></ThreeIcons>
         </div>
     )
 }

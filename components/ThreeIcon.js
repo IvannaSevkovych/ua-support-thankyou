@@ -7,7 +7,9 @@ import styles from '../styles/ThreeIcon.module.css'
 import vertex from './glsl/vertex.glsl'
 import fragment from './glsl/fragment.glsl'
 
-function IconPlane({ id, iconFile, ...threeProps }) {
+function IconPlane({ iconFile, ...threeProps }) {
+
+    console.log(iconFile);
     // Create a shader material
     const ThreeIconMaterial = shaderMaterial(
         {
@@ -35,19 +37,19 @@ function IconPlane({ id, iconFile, ...threeProps }) {
             {...threeProps}
             ref={ref}
         >
-            <planeGeometry args={[1, 1, 200, 200]} />
+            <planeGeometry args={[1, 1, 70, 70]} />
             <threeIconMaterial />
         </mesh>
     )
 }
 
-export const ThreeIcon = (props) => {
+export const ThreeIcons = ({ iconFiles }) => {
     return (
-        <Canvas className={styles.canvas} camera={{ position: [0, 0, 1] }}>
+        <Canvas className={styles.canvas} camera={{ position: [0, 0, 2] }}>
             <color attach="background" args={["black"]} />
-            {/* <PerspectiveCamera makeDefault> */}
-                <IconPlane position={[0, 0, 0]} {...props} />
-            {/* </PerspectiveCamera> */}
+            {
+                iconFiles.map((iconFile, index) => <IconPlane position={[ index == 2 ? 0.5 : index, index == 2 ? 1 : 0, 0]} iconFile={iconFile} />)
+            }
             <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
         </Canvas>
     )

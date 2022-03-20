@@ -1,4 +1,4 @@
 {
     "id" : "jb_steuerberatung",
-    "iconFile": "apple/bus.png"
+    "iconFiles": ["apple/bus.png", "apple/money-bag.png", "apple/automobile.png"]
 }

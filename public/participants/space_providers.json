@@ -1,4 +1,4 @@
 {
     "id" : "space_providers",
-    "iconFile": "apple/house.png"
+    "iconFiles": ["apple/house.png"]
 }
