@@ -13,6 +13,8 @@ const participant = ({ participant }) => {
             </Head>
             <div>
                 Participant {participant.id}
+
+                <p>{participant.text}</p>
             </div>
 
             <ThreeIcons {...participant}></ThreeIcons>
