@@ -48,7 +48,7 @@ export const ThreeIcons = ({ iconFiles }) => {
         <Canvas className={styles.canvas} camera={{ position: [0, 0, 2] }}>
             <color attach="background" args={["black"]} />
             {
-                iconFiles.map((iconFile, index) => <IconPlane position={[ index == 2 ? 0.5 : index, index == 2 ? 1 : 0, 0]} iconFile={iconFile} />)
+                iconFiles.map((iconFile, index) => <IconPlane key={index} position={[ index == 2 ? 0.5 : index, index == 2 ? 1 : 0, 0]} iconFile={iconFile} />)
             }
             <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
         </Canvas>

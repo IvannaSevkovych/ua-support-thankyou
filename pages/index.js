@@ -20,7 +20,7 @@ export default function Home({ participantIds }) {
 
                 {participantIds.map(id => {
                     return (
-                        <div>
+                        <div key={id}>
                             <Link href="/thankyou/[id]" as={`/thankyou/${id}`}>
                                 <a>{id}</a>
                             </Link>
