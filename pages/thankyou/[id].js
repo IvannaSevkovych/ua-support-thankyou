@@ -3,7 +3,7 @@ import { ThreeIcons } from "../../components/ThreeIcon";
 
 import styles from '../../styles/Participant.module.css'
 
-const participant = ({ participant }) => {
+const Participant = ({ participant }) => {
     return (
         <div className={styles.container}>
             <Head>
@@ -46,4 +46,4 @@ export async function getStaticPaths() {
 }
 
 
-export default participant;
+export default Participant;
