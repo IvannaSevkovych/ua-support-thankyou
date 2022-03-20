@@ -1,9 +1,11 @@
 import Head from "next/head";
 import { ThreeIcon } from "../../../components/ThreeIcon";
 
+import styles from '../../../styles/Participant.module.css'
+
 const participant = ({ participant }) => {
     return (
-        <>
+        <div className={styles.container}>
             <Head>
                 <title>
                     Danke an {participant.id}
@@ -14,7 +16,7 @@ const participant = ({ participant }) => {
             </div>
 
             <ThreeIcon {...participant}></ThreeIcon>
-        </>
+        </div>
     )
 }
 

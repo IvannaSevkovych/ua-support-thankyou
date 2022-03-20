@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { Canvas, useFrame, extend } from '@react-three/fiber'
 import { PerspectiveCamera, shaderMaterial, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
+import styles from '../styles/ThreeIcon.module.css'
 
 import vertex from './glsl/vertex.glsl'
 import fragment from './glsl/fragment.glsl'
@@ -42,7 +43,7 @@ function IconPlane({ id, iconFile, ...threeProps }) {
 
 export const ThreeIcon = (props) => {
     return (
-        <Canvas camera={{ position: [0, 0, 1] }}>
+        <Canvas className={styles.canvas} camera={{ position: [0, 0, 1] }}>
             <color attach="background" args={["black"]} />
             {/* <PerspectiveCamera makeDefault> */}
                 <IconPlane position={[0, 0, 0]} {...props} />
