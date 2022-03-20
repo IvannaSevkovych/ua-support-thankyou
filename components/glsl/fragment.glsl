@@ -1,7 +1,8 @@
 uniform float time;
-uniform sampler2D texture;
+uniform sampler2D iconTexture;
+
 varying vec2 vUv;
+
 void main(){
-    if (texture == null) discard;
-    gl_FragColor=texture2D(texture, vUv);
+    gl_FragColor=texture2D(iconTexture,vUv);
 }

@@ -13,7 +13,7 @@ const participant = ({ participant }) => {
                 Participant {participant.id}
             </div>
 
-            <ThreeIcon></ThreeIcon>
+            <ThreeIcon {...participant}></ThreeIcon>
         </>
     )
 }
