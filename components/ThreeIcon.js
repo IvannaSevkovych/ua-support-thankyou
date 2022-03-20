@@ -1,11 +1,20 @@
-import { useRef, useState } from 'react'
+import { useRef, useEffect } from 'react'
 import { Canvas, useFrame, extend } from '@react-three/fiber'
-import ThreeIconMaterial from './ThreeIconMaterial'
 import { PerspectiveCamera } from '@react-three/drei'
+import * as THREE from 'three'
+
+import ThreeIconMaterial from './ThreeIconMaterial'
+
 
 extend({ ThreeIconMaterial })
 
 function IconPlane(props) {
+
+    useEffect(() => {
+        const texture = new THREE.TextureLoader().load('/assets/emoji.png');
+        ThreeIconMaterial.uniforms.texture.value = texture;
+    }, [])
+
     // This reference gives us direct access to the THREE.Mesh object
     const ref = useRef()
     // Subscribe this component to the render-loop, rotate the mesh every frame
