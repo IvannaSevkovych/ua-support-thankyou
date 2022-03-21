@@ -1,0 +1,7 @@
+{
+    "id": "money_donators",
+    "iconFiles": ["joypixels/syringe_lg.png"],
+    "texts": [],
+    "nextPage": "helpers",
+    "prevPage": "housing_donators"
+}

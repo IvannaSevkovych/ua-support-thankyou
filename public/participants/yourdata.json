@@ -1,0 +1,8 @@
+{
+    "id": "yourdata",
+    "iconFiles": ["apple/bus.png", "apple/money-bag.png", "apple/automobile.png"],
+    "texts": [
+    ],
+    "nextPage": "wacg",
+    "prevPage": "jb_steuerberatung"
+}

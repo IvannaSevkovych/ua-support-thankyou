@@ -1,0 +1,7 @@
+{
+    "id": "goods_donators",
+    "iconFiles": ["joypixels/syringe_lg.png"],
+    "texts": [],
+    "nextPage": "housing_donators",
+    "prevPage": "fiat_koegel"
+}
