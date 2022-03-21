@@ -14,7 +14,10 @@ const Participant = ({ participant }) => {
             <div>
                 Participant {participant.id}
 
-                <div className={styles.text} dangerouslySetInnerHTML={{__html: participant.text}} />
+                {
+                    participant.texts.map((text, index) => <div key={index} className={styles.text} dangerouslySetInnerHTML={{ __html: text }} />)
+                }
+
             </div>
 
             <ThreeIcons {...participant}></ThreeIcons>
@@ -35,8 +38,8 @@ export async function getStaticPaths() {
     const req = await fetch(`http://localhost:3000/participants/_ids.json`);
     const data = await req.json();
 
-    const paths = data.map( participantId => {
-        return { params: { id : participantId } }
+    const paths = data.map(participantId => {
+        return { params: { id: participantId } }
     })
 
     return {

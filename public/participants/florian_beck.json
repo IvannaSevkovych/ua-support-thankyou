@@ -1,5 +1,5 @@
 {
     "id": "florian_beck",
     "iconFiles": ["joypixels/syringe_lg.png"],
-    "text": "Vielen herzlichen Dank and <b>Florian Beck</b> von der <a href=\"https://www.sport-ortho-waiblingen.de/\">Sport+ Orthopädie+ Waiblingen</a> für mehrere große medizinische Spenden. Herr Beck hat Infusionen zur Stabilisierung von Schwerverletzten sowie weiteres, wichtiges Zubehör für lebensrettende Erstversorgung gespendet."
+    "texts": ["Vielen herzlichen Dank an <b>Florian Beck</b> von der <a href=\"https://www.sport-ortho-waiblingen.de/\">Sport+ Orthopädie+ Waiblingen</a> für mehrere große medizinische Spenden. Herr Beck hat Infusionen zur Stabilisierung von Schwerverletzten sowie weiteres, wichtiges Zubehör für lebensrettende Erstversorgung gespendet."]
 }

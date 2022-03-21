@@ -9,7 +9,6 @@ import fragment from './glsl/fragment.glsl'
 
 function IconPlane({ iconFile, ...threeProps }) {
 
-    console.log(iconFile);
     // Create a shader material
     const ThreeIconMaterial = shaderMaterial(
         {
