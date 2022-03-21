@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from 'next/link'
 import { ThreeIcons } from "../../components/ThreeIcon";
 
 import styles from '../../styles/Participant.module.css'
@@ -21,6 +22,21 @@ const Participant = ({ participant }) => {
             </div>
 
             <ThreeIcons {...participant}></ThreeIcons>
+            <div>
+                {
+                    participant.prevPage && <Link href="/thankyou/[id]" as={`/thankyou/${participant.prevPage}`}>
+                        <a>&larr;</a>
+                    </Link>
+                }
+                <Link href="/">
+                    <a>Home</a>
+                </Link>
+                {
+                    participant.nextPage && <Link href="/thankyou/[id]" as={`/thankyou/${participant.nextPage}`}>
+                        <a>&rarr;</a>
+                    </Link>
+                }
+            </div>
         </div>
     )
 }

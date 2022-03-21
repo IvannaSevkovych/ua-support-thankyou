@@ -1,5 +1,7 @@
 {
     "id" : "wacg",
     "iconFiles": ["apple/money-bag.png"],
-    "texts": ["TODO"]
+    "texts": ["TODO"],
+    "nextPage": "lenz",
+    "prevPage": "jb_steuerberatung"
 }
