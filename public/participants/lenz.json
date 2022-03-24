@@ -1,7 +1,12 @@
 {
     "id": "lenz",
     "iconFiles": ["apple/automobile.png"],
-    "texts": ["Wir bedanken uns vielmals bei <b>Andreas Tsiminos</b>, sowie allen Mitarbeitern der <a href=\"https://www.lenz-messdienst.de/\">Lenz GmbH</a> und allen Mitgliedern des <a href=\"https://www.svfellbach.de\">SV Fellbach</a>, die auf Andis Hilferuf reagiert und uns zahlreich unterstützt haben."],
+    "texts": [
+        "Wir bedanken uns vielmals bei <b>Andreas Tsiminos</b> sowie bei allen Mitarbeitern der <a href=\"https://www.lenz-messdienst.de/\">Lenz GmbH</a> und allen Mitgliedern des <a href=\"https://www.svfellbach.de\">SV Fellbach</a>, die auf Andis Hilferuf reagiert und uns unterstützt haben.",
+        "Ein weiteres Mal Danke Andi für die Energie, die du aufgebracht hast um unserer Aktion viel mehr Tragweite zu verschaffen.",
+        "Danke für die Spenden, die bei uns eingegangen sind.",
+        "Und danke auch für die Bereitstellung des Lenz-Minibusses für unseren Hilfskonvoi, auch wenn wir diese Option dann doch nicht genutzt haben."
+    ],
     "nextPage": "florian_beck",
     "prevPage": "wacg"
 }

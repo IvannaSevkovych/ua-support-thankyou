@@ -1,7 +1,10 @@
 {
     "id": "fiat_koegel",
     "iconFiles": ["joypixels/syringe_lg.png"],
-    "texts": [],
+    "texts": [
+        "Danke, danke, danke an einen alten Schulkamerad <b>Benjamin Kögel</b> und an das <a href=\"https://www.fiat-koegel.de/\">Autohaus Kögel GmbH</a>.",
+        "Die von euch gespendeten Verbandskästen wurden bei der ersten Fahrt von Jürgen Braun an die Grenze geliefert und wurden dort sehr gebraucht."
+    ],
     "nextPage": "goods_donators",
     "prevPage": "roadjet"
 }

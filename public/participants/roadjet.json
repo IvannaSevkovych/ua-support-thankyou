@@ -1,7 +1,10 @@
 {
     "id": "roadjet",
     "iconFiles": ["joypixels/syringe_lg.png"],
-    "texts": [],
+    "texts": [
+        "Vielen herzlichen Dank an <b>Enes Simsek</b> und die <a href=\"https://www.roadjet.de/\">RoadJet GmbH</a>.",
+        "Danke, dass ihr eure Fernbusse für den Transport von Waren und Flüchtlingen zur Verfügung gestellt habt."
+    ],
     "nextPage": "fiat_koegel",
     "prevPage": "florian_beck"
 }
