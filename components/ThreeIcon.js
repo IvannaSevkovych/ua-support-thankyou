@@ -19,7 +19,7 @@ function IconPlane({ iconFile, ...threeProps }) {
         fragment,
         (material) => {
             material.transparent = true;
-            // material.wireframe = true;
+            material.wireframe = true;
         }
     )
     extend({ ThreeIconMaterial })
@@ -36,7 +36,7 @@ function IconPlane({ iconFile, ...threeProps }) {
             {...threeProps}
             ref={ref}
         >
-            <planeGeometry args={[1, 1, 70, 70]} />
+            <planeGeometry args={[1, 1, 50, 50]} />
             <threeIconMaterial />
         </mesh>
     )
@@ -45,7 +45,7 @@ function IconPlane({ iconFile, ...threeProps }) {
 export const ThreeIcons = ({ iconFiles }) => {
     return (
         <Canvas className={styles.canvas} camera={{ position: [0, 0, 2] }}>
-            <color attach="background" args={["black"]} />
+            <color attach="background" args={["#F4D566"]} />
             {
                 iconFiles.map((iconFile, index) => <IconPlane key={index} position={[ index == 2 ? 0.5 : index, index == 2 ? 1 : 0, 0]} iconFile={iconFile} />)
             }
