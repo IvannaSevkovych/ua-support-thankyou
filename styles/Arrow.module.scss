@@ -1,0 +1,24 @@
+.arrow {
+    height: 35px;
+    stroke: #FFFFFF;
+    transition: stroke 300ms ease;
+
+    &:hover {
+        stroke: #F4D566;
+    }
+
+    @media only screen and (min-width: 992px) {
+        height: 155px;
+    }
+}
+
+
+.arrow__next {
+    transform: rotate(180deg);
+    @media only screen and (min-width: 992px) {
+        stroke: #A8A8A8;
+        &:hover {
+            stroke: #FFFFFF;
+        }
+    }
+}

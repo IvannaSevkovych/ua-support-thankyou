@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { Canvas, useFrame, extend } from '@react-three/fiber'
 import { shaderMaterial, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
-import styles from '../styles/ThreeIcon.module.css'
+import styles from '../styles/ThreeIcon.module.scss'
 
 import vertex from './glsl/vertex.glsl'
 import fragment from './glsl/fragment.glsl'

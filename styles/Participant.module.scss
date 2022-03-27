@@ -1,0 +1,77 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.text > a {
+    font-weight: bold;
+    color: red;
+    transition: color 300ms ease;
+}
+
+.text > a:hover {
+    color: blue;
+}
+
+.blue__wrapper {
+    width: 100%;
+    flex-grow: 1;
+    background-color: #00348F;
+    position: relative;
+
+    @media only screen and (min-width: 992px) {
+        width: 60vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.blue__background {
+    mix-blend-mode: screen;
+    opacity: 20%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.blue__foreground {
+    position: relative;
+    @media only screen and (min-width: 992px) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.yellow__wrapper {
+    width: 100%;
+    height: 35vh;
+    background-color: #F4D566;
+
+    @media only screen and (min-width: 992px) {
+        width: 40vw;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.desktop__only {
+    display: none;
+
+    @media only screen and (min-width: 992px) {
+        display: block;
+    }
+}
+
+.mobile__only {
+    display: block;
+
+    @media only screen and (min-width: 992px) {
+        display: none;
+    }
+}

@@ -1,8 +1,9 @@
 import Head from "next/head";
-import Link from 'next/link'
+import Image from 'next/image'
 import { ThreeIcons } from "../../components/ThreeIcon";
+import { Arrow } from "../../components/Arrow";
 
-import styles from '../../styles/Participant.module.css'
+import styles from '../../styles/Participant.module.scss'
 
 const Participant = ({ participant }) => {
     return (
@@ -12,17 +13,49 @@ const Participant = ({ participant }) => {
                     Danke an {participant.id}
                 </title>
             </Head>
-            <div>
-                Participant {participant.id}
 
-                {
-                    participant.texts.map((text, index) => <div key={index} className={styles.text} dangerouslySetInnerHTML={{ __html: text }} />)
-                }
+            {/* Blue wrapper */}
+            <div className={styles.blue__wrapper}>
+
+                {/* Overlay image */}
+                <Image
+                    className={styles.blue__background}
+                    alt={participant.imgAlt}
+                    src={`/assets/photos/${participant.id}.jpg`}
+                    layout="fill"
+                    objectFit="cover"
+                    quality={100}
+                />
+
+                <div className={styles.blue__foreground}>
+                    {/* Desktop prev arrow */}
+                    {
+                        participant.prevPage && <Arrow className={styles.desktop__only} prev={participant.prevPage} />
+                    }
+                    {/* Text content with home navigation */}
+                    <div>
+                        Participant {participant.id}
+                        {
+                            participant.texts.map((text, index) => <div key={index} className={styles.text} dangerouslySetInnerHTML={{ __html: text }} />)
+                        }
+                    </div>
+                </div>
 
             </div>
 
-            <ThreeIcons {...participant}></ThreeIcons>
-            <div>
+            {/* Yellow wrapper */}
+            <div className={styles.yellow__wrapper}>
+
+                {/* Canvas */}
+                <ThreeIcons {...participant}></ThreeIcons>
+
+                {/* Desktop next arrow */}
+                {
+                    participant.nextPage && <Arrow className={styles.desktop__only} next={participant.nextPage} />
+                }
+            </div>
+
+            {/* <div>
                 {
                     participant.prevPage && <Link href="/thankyou/[id]" as={`/thankyou/${participant.prevPage}`}>
                         <a>&larr;</a>
@@ -36,7 +69,7 @@ const Participant = ({ participant }) => {
                         <a>&rarr;</a>
                     </Link>
                 }
-            </div>
+            </div> */}
         </div>
     )
 }
