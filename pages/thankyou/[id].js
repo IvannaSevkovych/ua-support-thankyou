@@ -4,6 +4,7 @@ import { ThreeIcons } from "../../components/ThreeIcon";
 import { Arrow } from "../../components/Arrow";
 
 import styles from '../../styles/Participant.module.scss'
+import { Wave } from "../../components/Wave";
 
 const Participant = ({ participant }) => {
     return (
@@ -40,6 +41,9 @@ const Participant = ({ participant }) => {
                         }
                     </div>
                 </div>
+
+                {/* Wave */}
+                <Wave></Wave>
 
             </div>
 
