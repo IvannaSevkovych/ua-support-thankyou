@@ -1,5 +1,6 @@
 {
     "id": "goods_donators",
+    "name": "Sachspender",
     "iconFiles": ["joypixels/syringe_lg.png"],
     "texts": [
         "Danke an viele, viele Menschen, die uns mit Sachgütern unterstützt haben. Danke an unsere Nachbarn, Freunde, Bekannte, die Medikamente, Lebensmittel und Wasser, Hygieneartikel, warme Decken, Kleidung, Spielzeug gespendet haben.",

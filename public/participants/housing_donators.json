@@ -1,5 +1,6 @@
 {
     "id": "housing_donators",
+    "name": "Wohnraumgeber",
     "iconFiles": ["joypixels/syringe_lg.png"],
     "texts": [
         "Wir möchten uns bei all denjenigen Menschen bedanken, die freiwillig ihre Zimmer, Wohnungen, Häuser für die Unterbringung von Flüchtlingen zur Verfügung gestellt haben.",

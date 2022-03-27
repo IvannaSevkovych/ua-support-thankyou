@@ -34,7 +34,7 @@ const Participant = ({ participant }) => {
                     }
                     {/* Text content with home navigation */}
                     <div>
-                        Participant {participant.id}
+                        <h1>{participant.name}</h1>
                         {
                             participant.texts.map((text, index) => <div key={index} className={styles.text} dangerouslySetInnerHTML={{ __html: text }} />)
                         }

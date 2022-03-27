@@ -1,5 +1,6 @@
 {
     "id": "helpers",
+    "name": "Fleißige Helfer",
     "iconFiles": ["apple/person-fencing.png"],
     "texts": [],
     "prevPage": "money_donators"
