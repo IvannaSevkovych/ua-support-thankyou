@@ -1,7 +1,11 @@
 {
     "id": "housing_donators",
     "iconFiles": ["joypixels/syringe_lg.png"],
-    "texts": [],
+    "texts": [
+        "Wir möchten uns bei all denjenigen Menschen bedanken, die freiwillig ihre Zimmer, Wohnungen, Häuser für die Unterbringung von Flüchtlingen zur Verfügung gestellt haben.",
+        "Ein ganz besonderer Dank gilt <b>Andrea und Mark Dorsch</b>, <b>Johannes X und XX XX</b> sowie der Familie <b>Axel XX</b>, an die wir persönlich geflüchtete Familien vermitteln konnten.",
+        "Uns selbstverständlich ein großes, großes Dankeschön an alle anderen Freiwilligen, mit denen wir nicht im direkten Kontakt standen."
+    ],
     "nextPage": "money_donators",
     "prevPage": "goods_donators"
 }

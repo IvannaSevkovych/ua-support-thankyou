@@ -1,7 +1,10 @@
 {
     "id": "goods_donators",
     "iconFiles": ["joypixels/syringe_lg.png"],
-    "texts": [],
+    "texts": [
+        "Danke an viele, viele Menschen, die uns mit Sachgütern unterstützt haben. Danke an unsere Nachbarn, Freunde, Bekannte, die Medikamente, Lebensmittel und Wasser, Hygieneartikel, warme Decken, Kleidung, Spielzeug gespendet haben.",
+        "Wir haben alles an Hilfsbedürftige, sei es im Ausland oder in Deutschland, weitergeben können."
+    ],
     "nextPage": "housing_donators",
     "prevPage": "fiat_koegel"
 }
