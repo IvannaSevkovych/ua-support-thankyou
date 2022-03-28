@@ -1,4 +1,4 @@
-import { useRef, Suspense } from 'react'
+import { useRef, Suspense, useLayoutEffect } from 'react'
 import { Canvas, useFrame, useLoader, extend } from '@react-three/fiber'
 import { shaderMaterial, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
@@ -28,6 +28,14 @@ function IconPlane({ iconFile, ...threeProps }) {
 
     // This reference gives us direct access to the THREE.Mesh object
     const ref = useRef()
+
+    useLayoutEffect(() => {
+        if (ref.current && ref.current.material) {
+            console.log('Hi', iconFile);
+            ref.current.material.uniforms.iconTexture.needsUpdate = true
+        }
+    }, [iconFile])
+
 
     // Subscribe this component to the render-loop, rotate the mesh every frame
     useFrame((state, delta) => (ref.current.material.uniforms.time.value += delta))

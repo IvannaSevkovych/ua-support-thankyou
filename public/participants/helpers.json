@@ -2,6 +2,11 @@
     "id": "helpers",
     "name": "Fleißige Helfer",
     "iconFiles": ["apple/person-fencing.png"],
-    "texts": [],
+    "texts": [
+        "Und last but not least, vielen Dank an alle Helfer, die täglich ihren Teil beitragen.",
+        "Vielen Dank an die Dolmetscher, die mit Jürgen Braun an die Grenze mitgefahren sind. Vielen Dank an die Dolmetscher, die in Deutschland vor Ort helfen.",
+        "Danke an diejenigen, die den Transport von Waren koordinieren, die Versorgung von Flüchtlingen vor Ort koordinieren, bei der Wohnungssuche mithelfen. Danke an die, die ihr Bestes tun um Menschen zu verbinden.",
+        "Vielen Dank euch allen!"
+    ],
     "prevPage": "money_donators"
 }
