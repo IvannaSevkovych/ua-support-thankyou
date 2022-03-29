@@ -3,11 +3,18 @@ import Link from 'next/link'
 import styles from '../styles/Arrow.module.scss'
 
 
-export const Arrow = ({ next, prev }) => {
+export const Arrow = ({ next, prev, display }) => {
 
     const style = [styles.arrow]
+
     if (next) {
         style.push(styles.arrow__next)
+    }
+
+    if ( display === 'desktop'){
+        style.push(styles.desktop__only)
+    } else if (display === 'mobile') {
+        style.push(styles.mobile__only)
     }
 
     const page = next ? next : prev;

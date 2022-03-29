@@ -2,9 +2,9 @@ import Head from "next/head";
 import Image from 'next/image'
 import { ThreeIcons } from "../../components/ThreeIcon";
 import { Arrow } from "../../components/Arrow";
+import { Wave } from "../../components/Wave";
 
 import styles from '../../styles/Participant.module.scss'
-import { Wave } from "../../components/Wave";
 
 const Participant = ({ participant }) => {
     return (
@@ -31,14 +31,27 @@ const Participant = ({ participant }) => {
                 <div className={styles.blue__foreground}>
                     {/* Desktop prev arrow */}
                     {
-                        participant.prevPage && <Arrow className={styles.desktop__only} prev={participant.prevPage} />
+                        participant.prevPage && <Arrow display='desktop' prev={participant.prevPage} />
                     }
                     {/* Text content with home navigation */}
                     <div>
-                        <h1>{participant.name}</h1>
+
+                        <div className={styles.headline__wrapper}>
+                            {/* Mobile prev arrow */}
+                            {
+                                participant.prevPage && <Arrow display='mobile' prev={participant.prevPage} />
+                            }
+                            <h1>{participant.name}</h1>
+                            {/* Mobile next arrow */}
+                            {
+                                participant.nextPage && <Arrow display='mobile' next={participant.nextPage} />
+                            }
+                        </div>
+
                         {
                             participant.texts.map((text, index) => <div key={index} className={styles.text} dangerouslySetInnerHTML={{ __html: text }} />)
                         }
+
                     </div>
                 </div>
 
@@ -55,7 +68,7 @@ const Participant = ({ participant }) => {
 
                 {/* Desktop next arrow */}
                 {
-                    participant.nextPage && <Arrow className={styles.desktop__only} next={participant.nextPage} />
+                    participant.nextPage && <Arrow display='desktop' next={participant.nextPage} />
                 }
             </div>
 

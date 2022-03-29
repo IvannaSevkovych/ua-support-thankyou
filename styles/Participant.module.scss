@@ -5,15 +5,23 @@
     flex-wrap: wrap;
 }
 
-.text > a {
-    font-weight: bold;
-    color: red;
+.text {
+    color: #FFEAA0;
+    text-align: center;
     transition: color 300ms ease;
+    a {
+        font-weight: bold;
+        color: red;
+        transition: color 300ms ease;
+    }
+    a:hover {
+        color: blue;
+    }
+    @media only screen and (min-width: 992px) {
+        text-align: left;
+    }
 }
 
-.text > a:hover {
-    color: blue;
-}
 
 .blue__wrapper {
     width: 100%;
@@ -41,10 +49,16 @@
 
 .blue__foreground {
     position: relative;
+    padding: 20px;
     @media only screen and (min-width: 992px) {
         display: flex;
         align-items: center;
     }
+}
+
+.headline__wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .yellow__wrapper {
@@ -57,21 +71,5 @@
         height: 100%;
         display: flex;
         align-items: center;
-    }
-}
-
-.desktop__only {
-    display: none;
-
-    @media only screen and (min-width: 992px) {
-        display: block;
-    }
-}
-
-.mobile__only {
-    display: block;
-
-    @media only screen and (min-width: 992px) {
-        display: none;
     }
 }
