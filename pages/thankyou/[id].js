@@ -1,10 +1,13 @@
 import Head from "next/head";
 import Image from 'next/image'
+
 import { ThreeIcons } from "../../components/ThreeIcons";
 import { Arrow } from "../../components/Arrow";
 import { Wave } from "../../components/Wave";
 
 import styles from '../../styles/Participant.module.scss'
+
+import participantIds from '../../data/_ids'
 
 const Participant = ({ participant }) => {
     return (
@@ -92,19 +95,14 @@ const Participant = ({ participant }) => {
 }
 
 export async function getStaticProps({ params }) {
-    const req = await fetch(`http://localhost:3000/participants/${params.id}.json`);
-    const data = await req.json();
-
+    const { default: unusedDefault, ...data } = await import(`../../data/${params.id}.json`)
     return {
         props: { participant: data }
     }
 }
 
 export async function getStaticPaths() {
-    const req = await fetch(`http://localhost:3000/participants/_ids.json`);
-    const data = await req.json();
-
-    const paths = data.map(participantId => {
+    const paths = participantIds.map(participantId => {
         return { params: { id: participantId } }
     })
 

@@ -1,8 +1,10 @@
 import Link from 'next/link'
 import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Emoji from '../components/Emoji'
+
+import styles from '../styles/Home.module.css'
+
+import participantIds from '../data/_ids'
 
 export default function Home({ participantIds }) {
     return (
@@ -53,10 +55,7 @@ export default function Home({ participantIds }) {
 }
 
 export async function getStaticProps() {
-    const req = await fetch(`http://localhost:3000/participants/_ids.json`);
-    const data = await req.json();
-
     return {
-        props: { participantIds: data }
+        props: { participantIds: participantIds }
     }
 }

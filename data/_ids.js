@@ -1,4 +1,4 @@
-[
+const data = [
     "jb_steuerberatung",
     "yourdata",
     "wacg",
@@ -11,3 +11,5 @@
     "money_donators",
     "helpers"
 ]
+
+export default data;
