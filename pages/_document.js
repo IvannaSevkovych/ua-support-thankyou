@@ -6,7 +6,7 @@ export default function Document() {
             <Head>
                 <link
                     rel="preload"
-                    href="/assets/fonts/bosch/Bosch.otf"
+                    href="/assets/fonts/mak/mak.woff"
                     as="font"
                     crossOrigin=""
                 />
