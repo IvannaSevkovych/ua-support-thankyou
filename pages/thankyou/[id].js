@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from 'next/image'
-import { ThreeIcons } from "../../components/ThreeIcon";
+import { ThreeIcons } from "../../components/ThreeIcons";
 import { Arrow } from "../../components/Arrow";
 import { Wave } from "../../components/Wave";
 
@@ -56,7 +56,7 @@ const Participant = ({ participant }) => {
                 </div>
 
                 {/* Wave */}
-                <Wave></Wave>
+                <Wave />
 
             </div>
 
@@ -64,7 +64,7 @@ const Participant = ({ participant }) => {
             <div className={styles.yellow__wrapper}>
 
                 {/* Canvas */}
-                <ThreeIcons {...participant}></ThreeIcons>
+                <ThreeIcons {...participant} />
 
                 {/* Desktop next arrow */}
                 {

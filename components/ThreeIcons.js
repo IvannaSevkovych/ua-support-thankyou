@@ -1,8 +1,9 @@
-import { useRef, Suspense, useLayoutEffect } from 'react'
-import { Canvas, useFrame, useLoader, extend } from '@react-three/fiber'
+import { useRef, useMemo, Suspense } from 'react'
+import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { shaderMaterial, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
-import styles from '../styles/ThreeIcon.module.scss'
+
+import styles from '../styles/ThreeIcons.module.scss'
 
 import vertex from './glsl/vertex.glsl'
 import fragment from './glsl/fragment.glsl'
@@ -12,7 +13,7 @@ function IconPlane({ iconFile, ...threeProps }) {
     const texture = useLoader(THREE.TextureLoader, `/assets/${iconFile}`)
 
     // Create a shader material
-    const ThreeIconMaterial = shaderMaterial(
+    const ThreeIconMaterial = useMemo(() => shaderMaterial(
         {
             time: 0,
             iconTexture: texture
@@ -23,19 +24,13 @@ function IconPlane({ iconFile, ...threeProps }) {
             material.transparent = true;
             material.wireframe = true;
         }
-    )
-    extend({ ThreeIconMaterial })
+    ), [texture])
+
+    // Create a geometry
+    const planeGeometry = useMemo(() => new THREE.PlaneBufferGeometry(1, 1, 50, 50), [])
 
     // This reference gives us direct access to the THREE.Mesh object
     const ref = useRef()
-
-    useLayoutEffect(() => {
-        if (ref.current && ref.current.material) {
-            console.log('Hi', iconFile);
-            ref.current.material.uniforms.iconTexture.needsUpdate = true
-        }
-    }, [iconFile])
-
 
     // Subscribe this component to the render-loop, rotate the mesh every frame
     useFrame((state, delta) => (ref.current.material.uniforms.time.value += delta))
@@ -45,16 +40,16 @@ function IconPlane({ iconFile, ...threeProps }) {
         <mesh
             {...threeProps}
             ref={ref}
+            geometry={planeGeometry}
+            material={new ThreeIconMaterial()}
         >
-            <planeGeometry args={[1, 1, 50, 50]} />
-            <threeIconMaterial />
         </mesh>
     )
 }
 
 export const ThreeIcons = ({ iconFiles }) => {
     return (
-        <Canvas className={styles.canvas} camera={{ position: [0, 0, 2] }}>
+        <Canvas className={styles.canvas} camera={{ position: [0, 0, 2], far: 3, dpr: [1, 2] }} >
             <color attach="background" args={["#F4D566"]} />
             <Suspense fallback={"<h1>Loading...</h1>"}>
                 {
@@ -62,6 +57,6 @@ export const ThreeIcons = ({ iconFiles }) => {
                 }
             </Suspense>
             <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
-        </Canvas>
+        </Canvas >
     )
 }
