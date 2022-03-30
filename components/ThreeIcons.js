@@ -8,7 +8,7 @@ import styles from '../styles/ThreeIcons.module.scss'
 import vertex from './glsl/vertex.glsl'
 import fragment from './glsl/fragment.glsl'
 
-function IconPlane({ iconFile, ...threeProps }) {
+function IconPlane({ iconFile, iconIndex, iconTotal }) {
 
     const texture = useLoader(THREE.TextureLoader, `/assets/${iconFile}`)
 
@@ -29,6 +29,19 @@ function IconPlane({ iconFile, ...threeProps }) {
     // Create a geometry
     const planeGeometry = useMemo(() => new THREE.PlaneBufferGeometry(1, 1, 50, 50), [])
 
+    // Set mesh position
+    let x = iconIndex
+    let y = 0
+    if (iconTotal == 2) {
+        x = 0.7 * (2 * iconIndex - 1);
+    }
+    else if (iconTotal == 3) {
+        x = 0.7 * (iconIndex - 1);
+        y = 0.7 * Math.pow(-1, iconIndex);
+    }
+    const z = 0
+    const position = new THREE.Vector3(x, y, z)
+
     // This reference gives us direct access to the THREE.Mesh object
     const ref = useRef()
 
@@ -38,7 +51,8 @@ function IconPlane({ iconFile, ...threeProps }) {
     // Return the view, these are regular Threejs elements expressed in JSX
     return (
         <mesh
-            {...threeProps}
+            // {...threeProps}
+            position={position}
             ref={ref}
             geometry={planeGeometry}
             material={new ThreeIconMaterial()}
@@ -53,7 +67,7 @@ export const ThreeIcons = ({ iconFiles }) => {
             <color attach="background" args={["#F4D566"]} />
             <Suspense fallback={"<h1>Loading...</h1>"}>
                 {
-                    iconFiles.map((iconFile, index) => <IconPlane key={index} position={[index == 2 ? 0.5 : index, index == 2 ? 1 : 0, 0]} iconFile={iconFile} />)
+                    iconFiles.map((iconFile, index) => <IconPlane key={index} iconIndex={index} iconTotal={iconFiles.length} iconFile={iconFile} />)
                 }
             </Suspense>
             <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
