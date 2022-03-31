@@ -74,3 +74,13 @@
         align-items: center;
     }
 }
+
+.canvas__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    height: 100%;
+    @media only screen and (min-width: 992px) {
+        flex-direction: column;
+    }
+}

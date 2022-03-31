@@ -1,0 +1,19 @@
+.canvas {
+    max-width: 350px;
+    max-height: 50%;
+    @media only screen and (min-width: 992px) {
+        max-height: 33%;
+    }
+}
+
+.canvas__left {
+    place-self: start;
+}
+
+.canvas__center {
+    place-self: center;
+}
+
+.canvas__right {
+    place-self: end;
+}

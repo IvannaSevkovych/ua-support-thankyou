@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Image from 'next/image'
 
-import { ThreeIcons } from "../../components/ThreeIcons";
+import { ThreeIcon } from "../../components/ThreeIcon";
 import { Arrow } from "../../components/Arrow";
 import { Wave } from "../../components/Wave";
 
@@ -66,8 +66,12 @@ const Participant = ({ participant }) => {
             {/* Yellow wrapper */}
             <div className={styles.yellow__wrapper}>
 
-                {/* Canvas */}
-                <ThreeIcons {...participant} />
+                {/* Canvases */}
+                    <div className={styles.canvas__wrapper}>
+                        {
+                            participant.iconFiles.map((iconFile, index) => <ThreeIcon key={index} iconFile={iconFile} iconIndex={index} iconsTotal={participant.iconFiles.length} />)
+                        }
+                    </div>
 
                 {/* Desktop next arrow */}
                 {
