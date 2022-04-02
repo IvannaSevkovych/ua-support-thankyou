@@ -9,6 +9,8 @@ export const Arrow = ({ next, prev, display }) => {
 
     if (next) {
         svgStyles.push(styles.arrow__next)
+    } else if (!next && !prev) {
+        svgStyles.push(styles.arrow__placeholder)
     }
 
     let aStyle

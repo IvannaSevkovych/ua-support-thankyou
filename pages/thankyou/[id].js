@@ -50,10 +50,8 @@ const Participant = ({ participant }) => {
                                 participant.prevPage && <Arrow display='mobile' prev={participant.prevPage} />
                             }
                             <h1>{participant.name}</h1>
-                            {/* Mobile next arrow */}
-                            {
-                                participant.nextPage && <Arrow display='mobile' next={participant.nextPage} />
-                            }
+                            {/* Mobile next arrow with placeholder */}
+                                <Arrow display='mobile' next={participant.nextPage} />
                         </div>
 
                         <div className={styles.texts__wrapper}>
