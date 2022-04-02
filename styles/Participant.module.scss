@@ -34,6 +34,7 @@
 .blue__foreground {
     position: relative;
     padding: 20px;
+    height: 100%;
     @media only screen and (min-width: 992px) {
         display: flex;
         align-items: center;
@@ -67,9 +68,18 @@
     }
 }
 
+.blue__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    & > :not(.texts__wrapper) {
+        flex-shrink: 0;
+    }
+}
+
 .texts__wrapper {
-    height: 350px;
-    overflow-y: scroll;
+    flex-grow: 1;
+    overflow-y: auto;
     // Place for scrollbar
     margin-right: -20px;
     padding-right: 20px;

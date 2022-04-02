@@ -39,7 +39,7 @@ const Participant = ({ participant }) => {
                         participant.prevPage && <Arrow display='desktop' prev={participant.prevPage} />
                     }
                     {/* Text content with home navigation */}
-                    <div>
+                    <div className={styles.blue__content}>
                         <Link href="/">
                             <a className={styles.home__link}><Emoji symbol='🇺🇦' label='Ukraine' /> &nbsp; Zur Startseite</a>
                         </Link>
