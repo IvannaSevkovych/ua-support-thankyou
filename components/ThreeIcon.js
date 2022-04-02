@@ -33,7 +33,13 @@ function IconPlane({ iconFile }) {
     const ref = useRef()
 
     // Subscribe this component to the render-loop, rotate the mesh every frame
-    useFrame((state, delta) => (ref.current.material.uniforms.time.value += delta))
+    const randomX = Math.random()* 100
+    const randomY = Math.random()* 100
+    useFrame((state, delta) => {
+        ref.current.material.uniforms.time.value += delta;
+        ref.current.rotation.x = Math.PI / 18 * Math.sin(state.clock.elapsedTime*1.2 + randomX )
+        ref.current.rotation.y = Math.PI / 16 * Math.sin(state.clock.elapsedTime*1.2 + randomY )
+    })
 
     // Return the view, these are regular Threejs elements expressed in JSX
     return (
