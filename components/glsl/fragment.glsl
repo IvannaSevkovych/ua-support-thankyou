@@ -6,7 +6,7 @@ varying vec3 vPosition;
 
 void main(){
 
-    vec2 st=80.*vPosition.xy;
+    vec2 st=20.*vPosition.xy;
 
     vec2 grid=abs(fract(st-.5)-.5)/fwidth(st);
     float color=min(grid.x,grid.y);
@@ -15,7 +15,7 @@ void main(){
     icon.b = (icon.r + icon.g + icon.b) / 3.;
     icon.g = icon.r;
     icon.r = icon.r;
-    // gl_FragColor=icon*(1.-color);
+    // gl_FragColor=icon*(1.-color)+icon*0.5;
     gl_FragColor=icon;
 
     // gl_FragColor=texture2D(iconTexture,vUv);

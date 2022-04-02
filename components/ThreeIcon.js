@@ -27,7 +27,7 @@ function IconPlane({ iconFile }) {
     ), [texture])
 
     // Create a geometry
-    const planeGeometry = useMemo(() => new THREE.PlaneBufferGeometry(1, 1, 50, 50), [])
+    const planeGeometry = useMemo(() => new THREE.PlaneBufferGeometry(1, 1, 40, 40), [])
 
     // This reference gives us direct access to the THREE.Mesh object
     const ref = useRef()
