@@ -90,8 +90,11 @@ h3 {
     text-align: center;
     margin: 0;
 
-    @media only screen and (min-width: 992px) {
-        font-size: 96px;
+     @media only screen and (min-width: 1024px) {
+        font-size: 64px;
         text-align: left;
+    }
+     @media only screen and (min-width: 1536px) {
+        font-size: 96px;
     }
 }

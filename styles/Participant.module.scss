@@ -12,7 +12,7 @@
     position: relative;
     height: 65vh;
 
-    @media only screen and (min-width: 992px) {
+     @media only screen and (min-width: 1024px) {
         width: 60vw;
         height: 100%;
         display: flex;
@@ -28,7 +28,7 @@
     width: 100%;
     height: 100%;
     filter: grayscale(100%);
-    @media only screen and (min-width: 992px) {
+     @media only screen and (min-width: 1024px) {
         padding: 0 48px;
     }
 }
@@ -37,10 +37,13 @@
     position: relative;
     padding: 20px;
     height: 100%;
-    @media only screen and (min-width: 992px) {
+     @media only screen and (min-width: 1024px) {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 36px 128px 36px 86px;
+    }
+    @media only screen and (min-width: 1536px) {
         padding: 64px 128px;
     }
 }
@@ -58,7 +61,10 @@
         font-size: 36px;
     }
 
-    @media only screen and (min-width: 992px) {
+     @media only screen and (min-width: 1024px) {
+        margin-bottom: 36px;
+    }
+     @media only screen and (min-width: 1536px) {
         margin-bottom: 72px;
     }
 }
@@ -70,7 +76,7 @@
     margin-bottom: 36px;
     h1 {
         padding: 0 20px;
-        @media only screen and (min-width: 992px) {
+         @media only screen and (min-width: 1024px) {
             padding: 0;
         }
     }
@@ -83,7 +89,7 @@
     & > :not(.texts__wrapper) {
         flex-shrink: 0;
     }
-    @media only screen and (min-width: 992px) {
+     @media only screen and (min-width: 1536px) {
         width: 75%;
     }
 }
@@ -103,7 +109,7 @@
         text-align: center;
         transition: color 300ms ease;
         margin-bottom: 16px;
-        @media only screen and (min-width: 992px) {
+         @media only screen and (min-width: 1024px) {
             text-align: left;
         }
     }
@@ -114,13 +120,16 @@
     height: 35vh;
     background-color: #f4d566;
 
-    @media only screen and (min-width: 992px) {
-        width: 40vw;
+     @media only screen and (min-width: 1024px) {
+        width: 35vw;
         height: 100%;
         display: flex;
         align-items: center;
         position: relative;
         padding-right: 64px;
+    }
+    @media only screen and (min-width: 1536px) {
+        width: 40vw;
     }
 }
 
@@ -129,7 +138,7 @@
     justify-content: center;
     flex-grow: 1;
     height: 100%;
-    @media only screen and (min-width: 992px) {
+     @media only screen and (min-width: 1024px) {
         flex-direction: column;
     }
 }
