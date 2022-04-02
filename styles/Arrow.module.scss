@@ -1,10 +1,10 @@
 .arrow {
     height: 35px;
-    stroke: #FFFFFF;
+    stroke: #ffffff;
     transition: stroke 300ms ease;
 
     &:hover {
-        stroke: #F4D566;
+        stroke: #f4d566;
     }
 
     @media only screen and (min-width: 992px) {
@@ -12,20 +12,33 @@
     }
 }
 
+.arrow__prev {
+    @media only screen and (min-width: 992px) {
+        position: absolute;
+        left: 0;
+        margin-right: auto;
+        transform: translateY(-50%);
+        margin-left: 48px;
+    }
+}
 
 .arrow__next {
     transform: rotate(180deg);
     @media only screen and (min-width: 992px) {
-        stroke: #A8A8A8;
+        position: absolute;
+        right: 0;
+        margin-left: auto;
+        transform: translateY(-50%) rotate(180deg);
+        margin-right: 48px;
+        stroke: #a8a8a8;
         &:hover {
-            stroke: #FFFFFF;
+            stroke: #ffffff;
         }
     }
 }
 
 .desktop__only {
     display: none;
-
     @media only screen and (min-width: 992px) {
         display: block;
     }

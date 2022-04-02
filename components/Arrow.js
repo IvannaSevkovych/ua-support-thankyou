@@ -9,7 +9,9 @@ export const Arrow = ({ next, prev, display }) => {
 
     if (next) {
         svgStyles.push(styles.arrow__next)
-    } else if (!next && !prev) {
+    } else if (prev) {
+        svgStyles.push(styles.arrow__prev)
+    } else {
         svgStyles.push(styles.arrow__placeholder)
     }
 
