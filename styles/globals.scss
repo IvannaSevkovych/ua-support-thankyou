@@ -66,8 +66,14 @@ body {
 }
 
 a {
-    color: inherit;
+    color: #82a9dd;
+    transition: color 300ms ease;
     text-decoration: none;
+    font-family: Mak, sans-serif;
+    letter-spacing: 1px;
+    &:hover {
+        color: #ffcd1b;
+    }
 }
 
 * {
@@ -82,6 +88,7 @@ h3 {
     font-size: 36px;
     color: #ffcd1b;
     text-align: center;
+    margin: 0;
 
     @media only screen and (min-width: 992px) {
         font-size: 96px;

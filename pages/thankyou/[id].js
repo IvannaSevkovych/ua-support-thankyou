@@ -1,9 +1,11 @@
 import Head from "next/head";
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { ThreeIcon } from "../../components/ThreeIcon";
 import { Arrow } from "../../components/Arrow";
 import { Wave } from "../../components/Wave";
+import Emoji from '../../components/Emoji'
 
 import styles from '../../styles/Participant.module.scss'
 
@@ -38,6 +40,9 @@ const Participant = ({ participant }) => {
                     }
                     {/* Text content with home navigation */}
                     <div>
+                        <Link href="/">
+                            <a className={styles.home__link}><Emoji symbol='🇺🇦' label='Ukraine' /> &nbsp; Zur Startseite</a>
+                        </Link>
 
                         <div className={styles.headline__wrapper}>
                             {/* Mobile prev arrow */}
@@ -51,9 +56,11 @@ const Participant = ({ participant }) => {
                             }
                         </div>
 
-                        {
-                            participant.texts.map((text, index) => <div key={index} className={styles.text} dangerouslySetInnerHTML={{ __html: text }} />)
-                        }
+                        <div className={styles.texts__wrapper}>
+                            {
+                                participant.texts.map((text, index) => <div key={index} className={styles.text} dangerouslySetInnerHTML={{ __html: text }} />)
+                            }
+                        </div>
 
                     </div>
                 </div>
@@ -67,11 +74,11 @@ const Participant = ({ participant }) => {
             <div className={styles.yellow__wrapper}>
 
                 {/* Canvases */}
-                    <div className={styles.canvas__wrapper}>
-                        {
-                            participant.iconFiles.map((iconFile, index) => <ThreeIcon key={index} iconFile={iconFile} iconIndex={index} iconsTotal={participant.iconFiles.length} />)
-                        }
-                    </div>
+                <div className={styles.canvas__wrapper}>
+                    {
+                        participant.iconFiles.map((iconFile, index) => <ThreeIcon key={index} iconFile={iconFile} iconIndex={index} iconsTotal={participant.iconFiles.length} />)
+                    }
+                </div>
 
                 {/* Desktop next arrow */}
                 {
