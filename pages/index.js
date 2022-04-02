@@ -23,7 +23,7 @@ export default function Home({ participantIds }) {
                     </h1>
 
                     <p>
-                        Wir, eine seit vielen Jahren in Stuttgart <Emoji symbol='🇩🇪' label='Deutcshland' /> lebende Familie aus Kyiv <Emoji symbol='🇺🇦' label='Ukraine' />, wollen uns bei sehr vielen von unseren Mitmenschen bedanken, die Zeit, Kraft und materielle Ressourcen zur Unterstützung der ukrainischen Bevölkerung aufgebracht haben und weiterhin aufbringen. Mit vereinten Kräften helfen wir alle das Elend des Krieges abzuschwächen und die Welt wieder ein Stückchen humaner und lebenswerter zu machen. Danke Euch vom ganzen Herzen <Emoji symbol='❤️' label='Herz' />!
+                        Wir, eine seit vielen Jahren in Stuttgart <Emoji symbol='🇩🇪' label='Deutschland' /> lebende Familie aus Kyiv <Emoji symbol='🇺🇦' label='Ukraine' />, wollen uns bei sehr vielen von unseren Mitmenschen bedanken, die Zeit, Kraft und materielle Ressourcen zur Unterstützung der ukrainischen Bevölkerung aufgebracht haben und weiterhin aufbringen. Mit vereinten Kräften helfen wir alle das Elend des Krieges abzuschwächen und die Welt wieder ein Stückchen humaner und lebenswerter zu machen. Danke Euch vom ganzen Herzen <Emoji symbol='❤️' label='Herz' />!
                     </p>
 
                     <p>
