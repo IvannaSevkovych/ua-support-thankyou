@@ -16,7 +16,7 @@ const Participant = ({ participant }) => {
         <div className={styles.container}>
             <Head>
                 <title>
-                    Danke an {participant.id}
+                    {participant.name}, danke!
                 </title>
             </Head>
 
