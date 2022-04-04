@@ -9,7 +9,7 @@ import styles from '../styles/Home.module.scss'
 
 import participantIds from '../data/_ids'
 
-export default function Home({ participantIds }) {
+export default function Home({ participants }) {
     return (
         <div className={styles.container}>
             <Head>
@@ -75,10 +75,10 @@ export default function Home({ participantIds }) {
 
                     <div className={styles.links_wrapper}>
                         {
-                            participantIds.map(id => {
+                            participants.map(p => {
                                 return (
-                                    <Link key={id} href="/thankyou/[id]" as={`/thankyou/${id}`}>
-                                        <a>{id}</a>
+                                    <Link key={p.id} href="/thankyou/[id]" as={`/thankyou/${p.id}`}>
+                                        <a>{p.name}</a>
                                     </Link>
                                 )
                             })
@@ -93,7 +93,17 @@ export default function Home({ participantIds }) {
 }
 
 export async function getStaticProps() {
+
+    const participants = []
+
+    const promises = participantIds.map(async id => {
+        const { default: unusedDefault, ...data } = await import(`../data/${id}.json`)
+        participants.push(data)
+    })
+
+    await Promise.all(promises)
+
     return {
-        props: { participantIds: participantIds }
+        props: { participants: participants }
     }
 }
