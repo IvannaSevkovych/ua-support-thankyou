@@ -3,6 +3,7 @@
     height: 100vh;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .blue__wrapper {
@@ -11,7 +12,10 @@
     position: relative;
     height: 65vh;
 
-     @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1024px) {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 60vw;
         height: 100%;
         display: flex;
@@ -27,7 +31,7 @@
     width: 100%;
     height: 100%;
     filter: grayscale(100%);
-     @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1024px) {
         padding: 0 48px;
     }
 }
@@ -44,10 +48,7 @@
     align-items: center;
     // Place for wave
     padding-bottom: 64px;
-     @media only screen and (min-width: 1024px) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    @media only screen and (min-width: 1024px) {
         padding: 36px 128px 36px 86px;
     }
     @media only screen and (min-width: 1536px) {
@@ -57,6 +58,13 @@
 
 .title {
     font-size: 56px;
+
+    @media only screen and (min-width: 1024px) {
+        font-size: 64px;
+    }
+    @media only screen and (min-width: 1536px) {
+        font-size: 96px;
+    }
 }
 
 .subtitle {
@@ -69,6 +77,14 @@
         font-family: Mak;
         display: block;
         font-size: 56px;
+
+        @media only screen and (min-width: 1024px) {
+            font-size: 64px;
+        }
+    }
+    @media only screen and (min-width: 1024px) {
+        font-size: 36px;
+        text-align: center;
     }
 }
 
@@ -80,6 +96,12 @@
     color: #ffcd1b;
     &:hover {
         color: #ffffff;
+    }
+    @media only screen and (min-width: 1024px) {
+        font-size: 48px;
+    }
+     @media only screen and (min-width: 1536px) {
+        font-size: 64px;
     }
 }
 
@@ -106,13 +128,20 @@
     background-color: #f4d566;
     padding: 32px 16px;
 
-     @media only screen and (min-width: 1024px) {
-        width: 35vw;
-        height: 100%;
+    @media only screen and (min-width: 1024px) {
+        margin-right: 0;
+        margin-left: auto;
+        width: 40vw;
+        padding: 64px 16px;
         padding-right: 64px;
     }
-    @media only screen and (min-width: 1536px) {
-        width: 40vw;
+
+    p {
+        margin-bottom: 16px;
+        @media only screen and (min-width: 1024px) {
+            margin-bottom: 24px;
+            text-align: center;
+        }
     }
 }
 
