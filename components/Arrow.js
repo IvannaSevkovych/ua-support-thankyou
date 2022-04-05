@@ -25,7 +25,7 @@ export const Arrow = ({ next, prev, display }) => {
     const page = next ? next : prev;
 
     return (
-        <Link href="/thankyou/[id]" as={`/thankyou/${page}`}>
+        <Link href="/thankyou/[id]" as={`/thankyou/${page}`} prefetch>
             <a className={aStyle}>
                 <svg className={svgStyles.join(' ')} viewBox="0 0 39 155" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path vectorEffect="non-scaling-stroke" d="M34 154L1.99999 77.5L34 1" strokeWidth="2" />
