@@ -4,6 +4,7 @@ import Image from 'next/image'
 
 import Emoji from '../components/Emoji'
 import { Wave } from "../components/Wave";
+import { HomeLink } from '../components/HomeLink';
 
 import styles from '../styles/Home.module.scss'
 
@@ -75,13 +76,7 @@ export default function Home({ participants }) {
 
                     <div className={styles.links_wrapper}>
                         {
-                            participants.map(p => {
-                                return (
-                                    <Link key={p.id} href="/thankyou/[id]" as={`/thankyou/${p.id}`}>
-                                        <a>{p.name}</a>
-                                    </Link>
-                                )
-                            })
+                            participants.map(p => <HomeLink key={p.id} id={p.id} name={p.name} />)
                         }
                     </div>
 
