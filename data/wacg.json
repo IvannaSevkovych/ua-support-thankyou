@@ -1,7 +1,7 @@
 {
     "id": "wacg",
     "name": "Werbeagentur cäsar gustav",
-    "iconFiles": ["apple/money-bag.png"],
+    "iconFiles": ["emojis/banknote.png", "emojis/pill.png"],
     "texts": [
         "Eine einfach nur überwältigende Unterstützung und Hilfsbereitschaft haben wir von unseren Freunden und Kollegen von der <a target=\"_blank\" href=\"https://www.wacg.de/\">Werbeagentur cäsar gustav</a> erfahren.",
         "Danke für eure Initiative bei der Medikamentenbeschaffung.",

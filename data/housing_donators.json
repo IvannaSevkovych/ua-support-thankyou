@@ -1,7 +1,7 @@
 {
     "id": "housing_donators",
     "name": "Unterbringer",
-    "iconFiles": ["joypixels/syringe_lg.png"],
+    "iconFiles": ["emojis/house.png", "emojis/handshake.png"],
     "texts": [
         "Wir möchten uns bei all denjenigen Menschen bedanken, die freiwillig ihre Zimmer, Wohnungen, Häuser für die Unterbringung von Flüchtlingen zur Verfügung gestellt haben.",
         "Ein ganz besonderer Dank gilt Andrea und Mark Dorsch, Johannes Rais und Luka Martin, sowie Axel und Zulma Jüdt, an die wir persönlich geflüchtete Familien vermitteln konnten.",

@@ -1,7 +1,7 @@
 {
     "id": "lenz",
     "name": "Lenz GmbH",
-    "iconFiles": ["apple/automobile.png", "apple/automobile.png"],
+    "iconFiles": ["emojis/automobile.png", "emojis/megaphone.png", "emojis/banknote.png"],
     "texts": [
         "Wir bedanken uns vielmals bei Andreas Tsiminos sowie bei allen Mitarbeitern der <a target=\"_blank\" href=\"https://www.lenz-messdienst.de/\">Lenz GmbH</a> und allen Mitgliedern des <a target=\"_blank\" href=\"https://www.svfellbach.de\">SV Fellbach</a>, die auf Andis Hilferuf reagiert und uns unterstützt haben.",
         "Ein weiteres Mal Danke Andi für die Energie, die du aufgebracht hast um unserer Aktion viel mehr Tragweite zu verschaffen.",

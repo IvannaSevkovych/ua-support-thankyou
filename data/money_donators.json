@@ -1,7 +1,7 @@
 {
     "id": "money_donators",
     "name": "Geldspender",
-    "iconFiles": ["joypixels/syringe_lg.png"],
+    "iconFiles": ["emojis/money-bag.png"],
     "texts": [
         "Seit Anfang März 2020 sind knapp 3000€ an Spenden bei uns eingegangen. Zusätzlich haben unzählige bekannte Menschen und Unternehmen nicht über uns gespendet. Euch allen noch einmal ein großes Dankeschön für eure Unterstützung!",
         "Wir haben das an uns gespendete Geld wie folgt verwendet:",

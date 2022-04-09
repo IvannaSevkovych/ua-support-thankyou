@@ -1,7 +1,7 @@
 {
     "id": "yourdata",
     "name": "yourdata GmbH",
-    "iconFiles": ["apple/bus.png", "apple/money-bag.png", "apple/automobile.png"],
+    "iconFiles": ["emojis/banknote.png", "emojis/pot-of-food.png", "emojis/automobile.png"],
     "texts": [
         "Unglaublich große Unterstützung haben wir von unseren Arbeitskollegen von der <a target=\"_blank\" href=\"https://www.yourdata.de/\">yourdata GmbH</a> erhalten.",
         "Vielen Dank an die Familie Vogler, die im Namen der yourdata GmbH Verpflegung und Hygieneartikel für 170 Flüchtlinge zur Verfügung gestellt hat.",

@@ -1,7 +1,7 @@
 {
     "id": "goods_donators",
     "name": "Sachspender",
-    "iconFiles": ["joypixels/syringe_lg.png"],
+    "iconFiles": ["emojis/coat.png","emojis/baby-bottle.png", "emojis/canned-food.png"],
     "texts": [
         "Danke an viele, viele Menschen, die uns mit Sachgütern unterstützt haben. Danke an unsere Nachbarn, Freunde, Bekannte, die Medikamente, Lebensmittel und Wasser, Hygieneartikel, warme Decken, Kleidung, Spielzeug gespendet haben.",
         "Wir haben alles an Hilfsbedürftige, sei es im Ausland oder in Deutschland, weitergeben können."
