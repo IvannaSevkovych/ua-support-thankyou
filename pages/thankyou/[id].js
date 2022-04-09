@@ -51,7 +51,7 @@ const Participant = ({ participant }) => {
                             }
                             <h1>{participant.name}</h1>
                             {/* Mobile next arrow with placeholder */}
-                                <Arrow display='mobile' next={participant.nextPage} />
+                            <Arrow display='mobile' next={participant.nextPage} />
                         </div>
 
                         <div className={styles.texts__wrapper}>
@@ -74,7 +74,10 @@ const Participant = ({ participant }) => {
                 {/* Canvases */}
                 <div className={styles.canvas__wrapper}>
                     {
-                        participant.iconFiles.map((iconFile, index) => <ThreeIcon key={index} iconFile={iconFile} iconIndex={index} iconsTotal={participant.iconFiles.length} />)
+                        participant.iconFiles.map((iconFile, index) => <ThreeIcon display='desktop' key={index} iconFile={iconFile} iconIndex={index} iconsTotal={participant.iconFiles.length} />)
+                    }
+                    {
+                        participant.iconFiles.map((iconFile, index) => <ThreeIcon display='mobile' key={index} iconFile={iconFile} iconIndex={index} iconsTotal={participant.iconFiles.length} />)
                     }
                 </div>
 

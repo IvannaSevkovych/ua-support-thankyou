@@ -8,7 +8,7 @@ import styles from '../styles/ThreeIcon.module.scss'
 import vertex from './glsl/vertex.glsl'
 import fragment from './glsl/fragment.glsl'
 
-function IconPlane({ iconFile }) {
+function IconPlane({ iconFile, display }) {
 
     const texture = useLoader(THREE.TextureLoader, `/assets/${iconFile}`)
 
@@ -22,12 +22,13 @@ function IconPlane({ iconFile }) {
         fragment,
         (material) => {
             material.transparent = true;
-            // material.wireframe = true;
+            material.wireframe = display == "desktop";
         }
     ), [texture])
 
     // Create a geometry
-    const planeGeometry = useMemo(() => new THREE.PlaneBufferGeometry(1, 1, 100, 100), [])
+    const segmentsCount = display == "desktop" ? 40 : 100
+    const planeGeometry = useMemo(() => new THREE.PlaneBufferGeometry(1, 1, segmentsCount, segmentsCount), [])
 
     // This reference gives us direct access to the THREE.Mesh object
     const ref = useRef()
@@ -54,9 +55,10 @@ function IconPlane({ iconFile }) {
 
 
 
-export const ThreeIcon = ({ iconFile, iconsTotal, iconIndex }) => {
+export const ThreeIcon = ({ iconFile, iconsTotal, iconIndex, display }) => {
 
     const canvasStyles = []
+    canvasStyles.push(display == "desktop" ? styles.canvas__desktop : styles.canvas__mobile )
     canvasStyles.push(styles.canvas)
 
     if (iconsTotal > 1) {
@@ -76,7 +78,7 @@ export const ThreeIcon = ({ iconFile, iconsTotal, iconIndex }) => {
         <Canvas className={canvasStyles.join(' ')} camera={{ position: [0, 0, 1], far: 4, dpr: [1, 2] }} >
             <color attach="background" args={["#F4D566"]} />
             <Suspense fallback={"<h1>Loading...</h1>"}>
-                <IconPlane iconFile={iconFile} />
+                <IconPlane iconFile={iconFile} display={display} />
             </Suspense>
             <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
         </Canvas >

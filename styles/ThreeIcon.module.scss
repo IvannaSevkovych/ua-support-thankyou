@@ -19,3 +19,16 @@
         place-self: end;
     }
 }
+
+.canvas__desktop {
+    display: none;
+    @media only screen and (min-width: 1024px) {
+        display: block;
+    }
+}
+
+.canvas__mobile {
+    @media only screen and (min-width: 1024px) {
+        display: none !important;
+    }
+}
