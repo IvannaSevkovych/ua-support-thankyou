@@ -22,12 +22,12 @@ function IconPlane({ iconFile }) {
         fragment,
         (material) => {
             material.transparent = true;
-            material.wireframe = true;
+            // material.wireframe = true;
         }
     ), [texture])
 
     // Create a geometry
-    const planeGeometry = useMemo(() => new THREE.PlaneBufferGeometry(1, 1, 40, 40), [])
+    const planeGeometry = useMemo(() => new THREE.PlaneBufferGeometry(1, 1, 100, 100), [])
 
     // This reference gives us direct access to the THREE.Mesh object
     const ref = useRef()
