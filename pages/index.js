@@ -2,10 +2,9 @@ import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
 
-
 import { Wave } from "../components/Wave";
 import { HomeLink } from '../components/HomeLink';
-import { TransitionCurtain } from '../animations/animations.js';
+import { TransitionCurtain } from '../components/TransitionCurtain.js';
 
 import styles from '../styles/Home.module.scss'
 
