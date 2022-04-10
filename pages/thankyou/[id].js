@@ -31,6 +31,7 @@ const Participant = ({ participant }) => {
                         layout="fill"
                         objectFit="cover"
                         quality={100}
+                        priority
                     />
                     <div className={styles.blue__foreground}>
                         {/* Desktop prev arrow */}

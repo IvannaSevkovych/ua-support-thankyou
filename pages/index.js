@@ -31,6 +31,7 @@ export default function Home({ participants }) {
                             layout="fill"
                             objectFit="cover"
                             quality={100}
+                            priority
                         />
                         <div className={styles.blue__foreground}>
                             {/* for aligning the h1 element */}
