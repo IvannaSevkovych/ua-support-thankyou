@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
-import { motion } from "framer-motion";
+
 
 import { Wave } from "../components/Wave";
 import { HomeLink } from '../components/HomeLink';
+import { TransitionCurtain } from '../animations/animations.js';
 
 import styles from '../styles/Home.module.scss'
 
@@ -12,7 +13,8 @@ import participantIds from '../data/_ids'
 
 export default function Home({ participants }) {
     return (
-        <motion.div exit={{opacity: 0}}>
+        <div>
+            <TransitionCurtain/>
             <div className={styles.container}>
                 <Head>
                     <title>TODO</title>
@@ -71,7 +73,7 @@ export default function Home({ participants }) {
                     </div>
                 </main>
             </div>
-        </motion.div>
+        </div>
     )
 }
 
