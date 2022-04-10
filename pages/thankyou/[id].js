@@ -14,7 +14,7 @@ import participantIds from '../../data/_ids'
 
 const Participant = ({ participant }) => {
     return (
-        <motion.div key={participant.id} exit={{opacity: 0}}>
+        <motion.div exit={{opacity: 0}}>
             <div className={styles.container}>
                 <Head>
                     <title>
