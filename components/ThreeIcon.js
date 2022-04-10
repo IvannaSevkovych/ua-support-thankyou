@@ -80,7 +80,7 @@ export const ThreeIcon = ({ iconFile, iconsTotal, iconIndex, display }) => {
             <Suspense fallback={"<h1>Loading...</h1>"}>
                 <IconPlane iconFile={iconFile} display={display} />
             </Suspense>
-            <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />
+            {/* <OrbitControls enablePan={true} enableZoom={true} enableRotate={true} /> */}
         </Canvas >
     )
 }
