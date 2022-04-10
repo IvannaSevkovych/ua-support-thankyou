@@ -1,12 +1,12 @@
 import Head from "next/head";
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from "framer-motion";
 
 import { ThreeIcon } from "../../components/ThreeIcon";
 import { Arrow } from "../../components/Arrow";
 import { Wave } from "../../components/Wave";
 import Emoji from '../../components/Emoji'
+import { TransitionCurtain } from '../../components/TransitionCurtain.js';
 
 import styles from '../../styles/Participant.module.scss'
 
@@ -14,7 +14,8 @@ import participantIds from '../../data/_ids'
 
 const Participant = ({ participant }) => {
     return (
-        <motion.div exit={{opacity: 0}}>
+        <div className={styles.container__wrapper}>
+            <TransitionCurtain/>
             <div className={styles.container}>
                 <Head>
                     <title>
@@ -94,7 +95,7 @@ const Participant = ({ participant }) => {
                     }
                 </div> */}
             </div>
-        </motion.div>
+        </div>
     )
 }
 
