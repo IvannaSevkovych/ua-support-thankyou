@@ -148,7 +148,19 @@
     height: 100%;
     padding: 24px 16px;
     padding-bottom: 48px;
-     @media only screen and (min-width: 1024px) {
+    @media only screen and (min-width: 1024px) {
         flex-direction: column;
+    }
+}
+
+.canvas__overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #F4D566;
+    z-index: 10;
+    opacity: 0.4;
+    @media only screen and (min-width: 1024px) {
+        display: none;
     }
 }

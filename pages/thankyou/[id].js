@@ -69,6 +69,7 @@ const Participant = ({ participant }) => {
                 <div className={styles.yellow__wrapper}>
                     {/* Canvases */}
                     <div className={styles.canvas__wrapper}>
+                        <div className={styles.canvas__overlay}></div>
                         {
                             participant.iconFiles.map((iconFile, index) => <ThreeIcon display='desktop' key={index} iconFile={iconFile} iconIndex={index} iconsTotal={participant.iconFiles.length} />)
                         }

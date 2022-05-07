@@ -1,0 +1,30 @@
+.link__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 36px;
+    &:hover {
+        color: #ffffff;
+    }
+    @media only screen and (min-width: 1024px) {
+        font-size: 48px;
+    }
+     @media only screen and (min-width: 1536px) {
+        font-size: 64px;
+    }
+}
+
+.link__arrow {
+    // .arrow start
+    height: 35px;
+    stroke: #82a9dd;
+    transition: stroke 300ms ease;
+
+    @media only screen and (min-width: 1024px) {
+        height: 96px;
+    }
+    // .arrow end
+
+    margin-left: 24px;
+    transform: rotate(180deg);
+}
