@@ -1,12 +1,13 @@
 import Head from "next/head";
 import Image from 'next/image'
 import Link from 'next/link'
+import { motion } from "framer-motion";
 
 import { ThreeIcon } from "../../components/ThreeIcon";
 import { Arrow } from "../../components/Arrow";
 import { Wave } from "../../components/Wave";
 import Emoji from '../../components/Emoji'
-import { TransitionCurtain } from '../../components/TransitionCurtain.js';
+import { textTransition } from '../../animations/animations.js';
 
 import styles from '../../styles/Participant.module.scss'
 
@@ -15,7 +16,6 @@ import participantIds from '../../data/_ids'
 const Participant = ({ participant }) => {
     return (
         <div className={styles.container__wrapper}>
-            <TransitionCurtain/>
             <div className={styles.container}>
                 <Head>
                     <title>
@@ -40,11 +40,13 @@ const Participant = ({ participant }) => {
                             participant.prevPage && <Arrow display='desktop' prev={participant.prevPage} />
                         }
                         {/* Text content with home navigation */}
-                        <div className={styles.blue__content}>
+                        <motion.div
+                            transition= {{staggerChildren: 0.3, when: "beforeChildren"}}
+                            className={styles.blue__content}>
                             <Link href="/">
                                 <a className={styles.home__link}><Emoji symbol='🇺🇦' label='Ukraine' /> &nbsp; Zur Startseite</a>
                             </Link>
-                            <div className={styles.headline__wrapper}>
+                            <motion.div variants={textTransition} initial="hidden" animate="enter" exit="exit" className={styles.headline__wrapper}>
                                 {/* Mobile prev arrow */}
                                 {
                                     participant.prevPage && <Arrow display='mobile' prev={participant.prevPage} />
@@ -52,13 +54,13 @@ const Participant = ({ participant }) => {
                                 <h1>{participant.name}</h1>
                                 {/* Mobile next arrow with placeholder */}
                                 <Arrow display='mobile' next={participant.nextPage} />
-                            </div>
-                            <div className={styles.texts__wrapper}>
+                            </motion.div>
+                            <motion.div variants={textTransition} initial="hidden" animate="enter" exit="exit" className={styles.texts__wrapper}>
                                 {
                                     participant.texts.map((text, index) => <div key={index} className={styles.text} dangerouslySetInnerHTML={{ __html: text }} />)
                                 }
-                            </div>
-                        </div>
+                            </motion.div>
+                        </motion.div>
                     </div>
                     {/* Wave */}
                     <Wave />
