@@ -28,3 +28,18 @@
     margin-left: 24px;
     transform: rotate(180deg);
 }
+
+.desktop__only {
+    visibility: hidden;
+    @media only screen and (min-width: 1024px) {
+        visibility: visible;
+    }
+}
+
+.mobile__only {
+    visibility: visible;
+
+    @media only screen and (min-width: 1024px) {
+        visibility: hidden;
+    }
+}

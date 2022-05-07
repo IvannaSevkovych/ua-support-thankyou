@@ -115,7 +115,7 @@
     }
 }
 
-.links_wrapper {
+.links__wrapper {
     margin-top: 36px;
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -129,4 +129,10 @@
             color: #ffffff;
         }
     }
+}
+
+.start__wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

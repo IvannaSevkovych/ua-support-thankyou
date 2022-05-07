@@ -40,7 +40,7 @@ export default function Home({ participants }) {
                             <h1 className={styles.title} >
                                 Дякуємо!
                             </h1>
-                            <StartButton />
+                            <StartButton display='desktop'/>
                         </div>
                         {/* Wave */}
                         <Wave />
@@ -56,7 +56,10 @@ export default function Home({ participants }) {
                                 Manche von Euch haben unsere Hilfsaktion direkt unterstützt. Andere haben ihre eigenen, viel größeren Hilfsaktionen gestartet und wir haben uns wie ein kleines Zahnrädchen eingefügt. Um Euch allen unsere tiefste Dankbarkeit und Anerkennung zu zeigen, haben Ivanna und Dima diese kleine Webseite erstellt. Wir hoffen Euch mit ein bisschen Spaß beim Durchklicken belohnen zu können. Klickt auf &quot;START&quot; um unserem Recap von Beginn an zu folgen. Oder springt direkt zu der Euch interessierenden Seite mit den Links weiter unten.
                             </p>
                         </div>
-                        <div className={styles.links_wrapper}>
+                        <div className={styles.start__wrapper}>
+                            <StartButton display='mobile'/>
+                        </div>
+                        <div className={styles.links__wrapper}>
                             {
                                 participants.map(p => <HomeLink key={p.id} id={p.id} name={p.name} />)
                             }
