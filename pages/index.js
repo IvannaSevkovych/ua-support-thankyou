@@ -4,7 +4,6 @@ import Link from 'next/link'
 
 import { Wave } from "../components/Wave";
 import { HomeLink } from '../components/HomeLink';
-import { TransitionCurtain } from '../components/TransitionCurtain.js';
 
 import styles from '../styles/Home.module.scss'
 
@@ -13,7 +12,6 @@ import participantIds from '../data/_ids'
 export default function Home({ participants }) {
     return (
         <div>
-            <TransitionCurtain />
             <div className={styles.container}>
                 <Head>
                     <title>TODO</title>
