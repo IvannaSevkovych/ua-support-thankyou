@@ -31,7 +31,7 @@ const Participant = ({ participant }) => {
                         src={`/assets/photos/${participant.id}.jpg`}
                         layout="fill"
                         objectFit="cover"
-                        quality={100}
+                        quality={40}
                         priority
                     />
                     <div className={styles.blue__foreground}>

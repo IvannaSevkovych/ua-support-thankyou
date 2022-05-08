@@ -29,7 +29,7 @@ export default function Home({ participants }) {
                             src="/assets/photos/sevkovych_index_overlay.jpg"
                             layout="fill"
                             objectFit="cover"
-                            quality={100}
+                            quality={40}
                             priority
                         />
                         <div className={styles.blue__foreground}>
