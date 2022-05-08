@@ -41,19 +41,25 @@ const Participant = ({ participant }) => {
                         }
                         {/* Text content with home navigation */}
                         <motion.div
-                            transition= {{staggerChildren: 0.3, when: "beforeChildren"}}
+                            transition={{ staggerChildren: 0.3, when: "beforeChildren" }}
                             className={styles.blue__content}>
                             <Link href="/">
                                 <a className={styles.home__link}><Emoji symbol='🇺🇦' label='Ukraine' /> &nbsp; Zur Startseite</a>
                             </Link>
                             <motion.div variants={textTransition} initial="hidden" animate="enter" exit="exit" className={styles.headline__wrapper}>
-                                {/* Mobile prev arrow */}
-                                {
-                                    participant.prevPage && <Arrow display='mobile' prev={participant.prevPage} />
-                                }
-                                <h1>{participant.name}</h1>
-                                {/* Mobile next arrow with placeholder */}
-                                <Arrow display='mobile' next={participant.nextPage} />
+                                {/* <span>Danke an:</span> */}
+                                <div className={styles.headline__name__nav}>
+                                    {/* Mobile prev arrow */}
+                                    {
+                                        participant.prevPage && <Arrow display='mobile' prev={participant.prevPage} />
+                                    }
+                                    <h1><Emoji symbol='💛' label='Yellow heart' /> Danke <Emoji symbol='💙' label='Blue heart' />
+                                        <br />
+                                        {participant.name}
+                                    </h1>
+                                    {/* Mobile next arrow with placeholder */}
+                                    <Arrow display='mobile' next={participant.nextPage} />
+                                </div>
                             </motion.div>
                             <motion.div variants={textTransition} initial="hidden" animate="enter" exit="exit" className={styles.texts__wrapper}>
                                 {
