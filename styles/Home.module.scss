@@ -44,7 +44,7 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     // Place for wave
     padding-bottom: 64px;
@@ -129,10 +129,4 @@
             color: #ffffff;
         }
     }
-}
-
-.start__wrapper {
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
