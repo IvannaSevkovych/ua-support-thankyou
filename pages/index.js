@@ -35,7 +35,7 @@ export default function Home({ participants }) {
                             priority
                         />
                         <div className={styles.blue__foreground}>
-                            {/* for aligning the h1 element */}
+                            {/* for aligning the link element */}
                             <div></div>
                             <Link href="/thankyou/jb_steuerberatung">
                                 <a className={styles.title}>
@@ -49,7 +49,7 @@ export default function Home({ participants }) {
                     {/* Yellow wrapper */}
                     <div className={styles.yellow__wrapper}>
                         <div className={styles.subtitle__wrapper}>
-                            <h2 className={styles.subtitle}>Familie Sevkovych sagt: <span>Danke!</span></h2>
+                            <h1 className={styles.subtitle}>Familie Sevkovych sagt: <span>Danke!</span></h1>
                             <p>
                                 Hallo zusammen! Wir sind die Familie Sevkovych: Oleksandr, Nataliia, Dima, Ivanna, Maksym und Sascha. Wir kommen aus Kyiv und leben seit vielen, vielen Jahren in Stuttgart. Der Krieg in unserer alten Heimat hat auch unser Leben start durcheinander gewirbelt. Zu Beginn des Krieges haben wir beschlossen, dass wir den flüchtenden Menschen irgendwie helfen müssen. Auf unseren Hilferuf haben sehr viele Menschen hier in Deutschland reagiert, und bei diesen Menschen wollen wir uns jetzt bedanken. Danke Euch vom ganzen Herzen!
                             </p>
