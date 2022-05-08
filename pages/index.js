@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import { Wave } from "../components/Wave";
 import { HomeLink } from '../components/HomeLink';
-import Emoji from '../../components/Emoji'
+import Emoji from '../components/Emoji'
 
 import styles from '../styles/Home.module.scss'
 
@@ -15,7 +15,7 @@ export default function Home({ participants }) {
         <div>
             <div className={styles.container}>
                 <Head>
-                    <title>Дякуємо!<Emoji symbol='💛' label='Yellow heart' /> Danke <Emoji symbol='💙' label='Blue heart' /></title>
+                    <title>Дякуємо!💛💙</title>
                     <meta name="description" content="Familie Sevkovych sagt Danke für Eure Unterstützung!"/>
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
