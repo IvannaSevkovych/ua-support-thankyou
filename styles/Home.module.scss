@@ -69,6 +69,10 @@
 
 .subtitle__wrapper {
     margin-bottom: 48px;
+    @media only screen and (min-width: 1024px) {
+        // Compensate for negative wave margin
+        padding-left: 10px;
+    }
 }
 
 .subtitle {
