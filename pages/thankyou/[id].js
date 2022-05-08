@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from "framer-motion";
+import { getPlaiceholder } from "plaiceholder";
 
 import { ThreeIcon } from "../../components/ThreeIcon";
 import { Arrow } from "../../components/Arrow";
@@ -13,7 +14,7 @@ import styles from '../../styles/Participant.module.scss'
 
 import participantIds from '../../data/_ids'
 
-const Participant = ({ participant }) => {
+const Participant = ({ participant, imageProps }) => {
     return (
         <div className={styles.container__wrapper}>
             <div className={styles.container}>
@@ -28,7 +29,8 @@ const Participant = ({ participant }) => {
                     <Image
                         className={styles.blue__background}
                         alt={participant.imgAlt}
-                        src={`/assets/photos/${participant.id}.jpg`}
+                        {...imageProps}
+                        placeholder="blur"
                         layout="fill"
                         objectFit="cover"
                         quality={40}
@@ -110,8 +112,15 @@ const Participant = ({ participant }) => {
 
 export async function getStaticProps({ params }) {
     const { default: unusedDefault, ...data } = await import(`../../data/${params.id}.json`)
+    const { base64, img } = await getPlaiceholder(`/assets/photos/${params.id}.jpg`);
     return {
-        props: { participant: data }
+        props: {
+            participant: data,
+            imageProps: {
+                ...img,
+                blurDataURL: base64,
+            },
+        }
     }
 }
 

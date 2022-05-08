@@ -1,16 +1,16 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import { getPlaiceholder } from "plaiceholder";
 
 import { Wave } from "../components/Wave";
 import { HomeLink } from '../components/HomeLink';
-import Emoji from '../components/Emoji'
 
 import styles from '../styles/Home.module.scss'
 
 import participantIds from '../data/_ids'
 
-export default function Home({ participants }) {
+export default function Home({ participants, imageProps }) {
     return (
         <div>
             <div className={styles.container}>
@@ -26,7 +26,8 @@ export default function Home({ participants }) {
                         <Image
                             className={styles.blue__background}
                             alt="Dima und Ivanna Sevkovych"
-                            src="/assets/photos/sevkovych_index_overlay.jpg"
+                            {...imageProps}
+                            placeholder="blur"
                             layout="fill"
                             objectFit="cover"
                             quality={40}
@@ -68,7 +69,7 @@ export default function Home({ participants }) {
 }
 
 export async function getStaticProps() {
-
+    // Participants data
     const participants = []
 
     const promises = participantIds.map(async id => {
@@ -78,7 +79,17 @@ export async function getStaticProps() {
 
     await Promise.all(promises)
 
+    // Background image blur
+    const { base64, img } = await getPlaiceholder('/assets/photos/sevkovych_index_overlay.jpg');
+
+    // Return
     return {
-        props: { participants: participants }
+        props: {
+            participants: participants,
+            imageProps: {
+                ...img,
+                blurDataURL: base64,
+            }
+        }
     }
 }
