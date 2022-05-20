@@ -87,7 +87,7 @@ export async function getStaticProps() {
         props: {
             participants: participants,
             imageProps: {
-                ...img,
+                src: img.src,
                 blurDataURL: base64,
             }
         }

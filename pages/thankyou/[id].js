@@ -113,11 +113,12 @@ const Participant = ({ participant, imageProps }) => {
 export async function getStaticProps({ params }) {
     const { default: unusedDefault, ...data } = await import(`../../data/${params.id}.json`)
     const { base64, img } = await getPlaiceholder(`/assets/photos/${params.id}.jpg`);
+
     return {
         props: {
             participant: data,
             imageProps: {
-                ...img,
+                src: img.src,
                 blurDataURL: base64,
             },
         }
