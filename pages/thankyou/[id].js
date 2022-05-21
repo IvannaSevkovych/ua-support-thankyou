@@ -30,7 +30,7 @@ const Participant = ({ participant, imageProps }) => {
                         className={styles.blue__background}
                         alt={participant.imgAlt}
                         {...imageProps}
-                        // placeholder="blur"
+                        placeholder="blur"
                         layout="fill"
                         objectFit="cover"
                         quality={40}
@@ -119,7 +119,7 @@ export async function getStaticProps({ params }) {
             participant: data,
             imageProps: {
                 src: img.src,
-                // blurDataURL: base64,
+                blurDataURL: base64,
             },
         }
     }
