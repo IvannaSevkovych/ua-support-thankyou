@@ -24,7 +24,9 @@ const Participant = ({ participant, imageProps }) => {
                     </title>
                 </Head>
                 {/* Blue wrapper */}
-                <div className={styles.blue__wrapper}>
+                <motion.div
+                    transition={{ staggerChildren: 0.3, when: "beforeChildren" }}
+                    className={styles.blue__wrapper}>
                     {/* Overlay image */}
                     <Image
                         className={styles.blue__background}
@@ -42,9 +44,7 @@ const Participant = ({ participant, imageProps }) => {
                             participant.prevPage && <Arrow display='desktop' prev={participant.prevPage} />
                         }
                         {/* Text content with home navigation */}
-                        <motion.div
-                            transition={{ staggerChildren: 0.3, when: "beforeChildren" }}
-                            className={styles.blue__content}>
+                        <div className={styles.blue__content}>
                             <Link href="/">
                                 <a className={styles.home__link}><Emoji symbol='🇺🇦' label='Ukraine' /> &nbsp; Zur Startseite</a>
                             </Link>
@@ -68,11 +68,11 @@ const Participant = ({ participant, imageProps }) => {
                                     participant.texts.map((text, index) => <div key={index} className={styles.text} dangerouslySetInnerHTML={{ __html: text }} />)
                                 }
                             </motion.div>
-                        </motion.div>
+                        </div>
                     </div>
                     {/* Wave */}
                     <Wave />
-                </div>
+                </motion.div>
                 {/* Yellow wrapper */}
                 <div className={styles.yellow__wrapper}>
                     {/* Canvases */}
