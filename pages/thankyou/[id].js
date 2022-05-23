@@ -37,7 +37,7 @@ const Participant = ({ participant, imageProps }) => {
                             layout="fill"
                             objectFit="cover"
                             quality={40}
-                            priorityr
+                            priority
                         />
                     </motion.div>
                     <div className={styles.blue__foreground}>
