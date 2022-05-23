@@ -23,6 +23,7 @@ function IconPlane({ iconFile, display }) {
         (material) => {
             material.transparent = true;
             material.wireframe = display == "desktop";
+            material.extensions.derivatives = '#extension GL_OES_standard_derivatives : enable'
         }
     ), [texture])
 
