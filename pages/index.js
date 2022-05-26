@@ -17,23 +17,25 @@ export default function Home({ participants, imageProps }) {
             <div className={styles.container}>
                 <Head>
                     <title>Дякуємо!💛💙</title>
-                    <meta name="description" content="Familie Sevkovych sagt Danke für Eure Unterstützung!"/>
+                    <meta name="description" content="Familie Sevkovych sagt Danke für Eure Unterstützung!" />
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
                 <main className={styles.container}>
                     {/* Blue wrapper */}
                     <motion.div className={styles.blue__wrapper} transition={{ staggerChildren: 0.3, when: "beforeChildren" }}>
-                        {/* Overlay image */}
-                        <Image
-                            className={styles.blue__background}
-                            alt="Dima und Ivanna Sevkovych"
-                            {...imageProps}
-                            placeholder="blur"
-                            layout="fill"
-                            objectFit="cover"
-                            quality={40}
-                            priority
-                        />
+                        <motion.div variants={textTransition} initial="hidden" animate="enter" exit="exit">
+                            {/* Overlay image */}
+                            <Image
+                                className={styles.blue__background}
+                                alt="Dima und Ivanna Sevkovych"
+                                {...imageProps}
+                                placeholder="blur"
+                                layout="fill"
+                                objectFit="cover"
+                                quality={40}
+                                priority
+                            />
+                        </motion.div>
                         <motion.div className={styles.blue__foreground} variants={textTransition} initial="hidden" animate="enter" exit="exit">
                             {/* for aligning the link element */}
                             <div></div>
