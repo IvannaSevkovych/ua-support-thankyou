@@ -22,7 +22,7 @@ export default function Home({ participants, imageProps }) {
                 </Head>
                 <main className={styles.container}>
                     {/* Blue wrapper */}
-                    <motion.div className={styles.blue__wrapper} transition={{ staggerChildren: 0.3, when: "beforeChildren" }}>
+                    <div className={styles.blue__wrapper}>
                         <motion.div variants={textTransition} initial="hidden" animate="enter" exit="exit">
                             {/* Overlay image */}
                             <Image
@@ -45,7 +45,7 @@ export default function Home({ participants, imageProps }) {
                                 </a>
                             </Link>
                         </motion.div>
-                    </motion.div>
+                    </div>
                     {/* Yellow wrapper */}
                     <motion.div className={styles.yellow__wrapper}>
                         <motion.div className={styles.subtitle__wrapper} variants={textTransition} initial="hidden" animate="enter" exit="exit">

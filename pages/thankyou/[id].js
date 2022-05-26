@@ -23,9 +23,7 @@ const Participant = ({ participant, imageProps }) => {
                     </title>
                 </Head>
                 {/* Blue wrapper */}
-                <motion.div
-                    transition={{ staggerChildren: 0.3, when: "beforeChildren" }}
-                    className={styles.blue__wrapper}>
+                <div className={styles.blue__wrapper}>
                     {/* Overlay image */}
                     <motion.div variants={textTransition} initial="hidden" animate="enter" exit="exit">
                         <Image
@@ -72,7 +70,7 @@ const Participant = ({ participant, imageProps }) => {
                         </div>
                     </div>
 
-                </motion.div>
+                </div>
                 {/* Yellow wrapper */}
                 <div className={styles.yellow__wrapper}>
                     {/* Canvases */}
