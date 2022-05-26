@@ -27,7 +27,7 @@ const Participant = ({ participant, imageProps }) => {
                     transition={{ staggerChildren: 0.3, when: "beforeChildren" }}
                     className={styles.blue__wrapper}>
                     {/* Overlay image */}
-                    <motion.div variants={textTransition} initial="hidden" animate="enter" exit="exit">
+                    <div>
                         <Image
                             className={styles.blue__background}
                             alt={participant.imgAlt}
@@ -38,7 +38,7 @@ const Participant = ({ participant, imageProps }) => {
                             quality={40}
                             priority
                         />
-                    </motion.div>
+                    </div>
                     <div className={styles.blue__foreground}>
                         {/* Desktop prev arrow */}
                         {
