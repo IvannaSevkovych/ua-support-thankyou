@@ -1,5 +1,5 @@
 .wave__mobile {
-    position: absolute;
+    position: fixed;
     bottom: calc(var(--yellow-height) - 2px);
     width: 100%;
 
@@ -14,7 +14,7 @@
 
 .wave__desktop {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: calc(var(--yellow-width) - 10px);
     height: 100%;
