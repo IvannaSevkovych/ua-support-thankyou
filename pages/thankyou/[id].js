@@ -46,7 +46,7 @@ const Participant = ({ participant, imageProps }) => {
                         }
                         {/* Text content with home navigation */}
                         <div className={styles.blue__content}>
-                            <Link href="/">
+                            <Link href="/thankyou/jb_steuerberatung">
                                 <a className={styles.home__link}><Emoji symbol='🇺🇦' label='Ukraine' /> &nbsp; Zur Startseite</a>
                             </Link>
                             <motion.div variants={textTransition} initial="hidden" animate="enter" exit="exit" className={styles.headline__wrapper}>
