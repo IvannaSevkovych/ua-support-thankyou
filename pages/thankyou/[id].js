@@ -6,7 +6,6 @@ import { getPlaiceholder } from "plaiceholder";
 
 import { ThreeIcon } from "../../components/ThreeIcon";
 import { Arrow } from "../../components/Arrow";
-import { Wave } from "../../components/Wave";
 import Emoji from '../../components/Emoji'
 import { textTransition } from '../../animations/animations.js';
 
@@ -72,8 +71,7 @@ const Participant = ({ participant, imageProps }) => {
                             </motion.div>
                         </div>
                     </div>
-                    {/* Wave */}
-                    <Wave />
+
                 </motion.div>
                 {/* Yellow wrapper */}
                 <div className={styles.yellow__wrapper}>

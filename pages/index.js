@@ -3,7 +3,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getPlaiceholder } from "plaiceholder";
 
-import { Wave } from "../components/Wave";
 import { HomeLink } from '../components/HomeLink';
 
 import styles from '../styles/Home.module.scss'
@@ -42,8 +41,6 @@ export default function Home({ participants, imageProps }) {
                                 </a>
                             </Link>
                         </div>
-                        {/* Wave */}
-                        <Wave />
                     </div>
                     {/* Yellow wrapper */}
                     <div className={styles.yellow__wrapper}>
