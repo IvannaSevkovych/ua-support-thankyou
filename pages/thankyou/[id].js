@@ -90,21 +90,6 @@ const Participant = ({ participant, imageProps }) => {
                         participant.nextPage && <Arrow display='desktop' next={participant.nextPage} />
                     }
                 </div>
-                {/* <div>
-                    {
-                        participant.prevPage && <Link href="/thankyou/[id]" as={`/thankyou/${participant.prevPage}`}>
-                            <a>&larr;</a>
-                        </Link>
-                    }
-                    <Link href="/">
-                        <a>Home</a>
-                    </Link>
-                    {
-                        participant.nextPage && <Link href="/thankyou/[id]" as={`/thankyou/${participant.nextPage}`}>
-                            <a>&rarr;</a>
-                        </Link>
-                    }
-                </div> */}
             </div>
         </div>
     )
