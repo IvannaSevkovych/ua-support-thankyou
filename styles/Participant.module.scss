@@ -151,15 +151,12 @@
     background-color: #f4d566;
 
     @media only screen and (min-width: 1024px) {
-        width: 35vw;
+        width: var(--yellow-width);
         height: 100%;
         display: flex;
         align-items: center;
         position: relative;
         padding-right: 64px;
-    }
-    @media only screen and (min-width: 1536px) {
-        width: 40vw;
     }
 }
 
