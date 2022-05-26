@@ -47,7 +47,7 @@ export default function Home({ participants, imageProps }) {
                         </motion.div>
                     </motion.div>
                     {/* Yellow wrapper */}
-                    <div className={styles.yellow__wrapper}>
+                    <motion.div className={styles.yellow__wrapper}>
                         <motion.div className={styles.subtitle__wrapper} variants={textTransition} initial="hidden" animate="enter" exit="exit">
                             <h1 className={styles.subtitle}>Familie Sevkovych sagt: <span>Danke!</span></h1>
                             <p>
@@ -62,7 +62,7 @@ export default function Home({ participants, imageProps }) {
                                 participants.map(p => <HomeLink key={p.id} id={p.id} name={p.name} />)
                             }
                         </motion.div>
-                    </div>
+                    </motion.div>
                 </main>
             </div>
         </div>
