@@ -1,6 +1,6 @@
 .wave__mobile {
     position: absolute;
-    bottom: -2px;
+    bottom: calc(var(--yellow-height) - 2px);
     width: 100%;
 
     path {
@@ -16,7 +16,7 @@
     display: none;
     position: absolute;
     top: 0;
-    right: 39%;
+    right: calc(var(--yellow-width) - 15px);
     height: 100%;
 
     path {
