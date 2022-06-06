@@ -19,10 +19,6 @@
     right: calc(var(--yellow-width) - 10px);
     height: 100%;
 
-    path {
-        fill: #F4D566;
-    }
-
      @media only screen and (min-width: 1024px) {
         display: block;
     }
