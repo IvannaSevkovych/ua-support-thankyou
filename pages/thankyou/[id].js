@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Image from 'next/image'
 import Link from 'next/link'
-import { motion } from "framer-motion";
+import { useRouter } from 'next/router'
+import { motion, AnimatePresence } from "framer-motion";
 import { getPlaiceholder } from "plaiceholder";
 
 import { ThreeIcon } from "../../components/ThreeIcon";
@@ -14,6 +15,7 @@ import styles from '../../styles/Participant.module.scss'
 import participantIds from '../../data/_ids'
 
 const Participant = ({ participant, imageProps }) => {
+    const router = useRouter()
     return (
         <div className={styles.container__wrapper}>
             <div className={styles.container}>
@@ -25,18 +27,20 @@ const Participant = ({ participant, imageProps }) => {
                 {/* Blue wrapper */}
                 <div className={styles.blue__wrapper}>
                     {/* Overlay image */}
-                    <motion.div variants={textTransition} initial="hidden" animate="enter" exit="exit">
-                        <Image
-                            className={styles.blue__background}
-                            alt={participant.imgAlt}
-                            {...imageProps}
-                            placeholder="blur"
-                            layout="fill"
-                            objectFit="cover"
-                            quality={40}
-                            priority
-                        />
-                    </motion.div>
+                    <AnimatePresence exitBeforeEnter={true}>
+                        <motion.div key={router.asPath} variants={textTransition} initial="hidden" animate="enter" exit="exit">
+                            <Image
+                                className={styles.blue__background}
+                                alt={participant.imgAlt}
+                                {...imageProps}
+                                placeholder="blur"
+                                layout="fill"
+                                objectFit="cover"
+                                quality={40}
+                                priority
+                            />
+                        </motion.div>
+                    </AnimatePresence>
                     <div className={styles.blue__foreground}>
                         {/* Desktop prev arrow */}
                         {
@@ -47,26 +51,30 @@ const Participant = ({ participant, imageProps }) => {
                             <Link href="/">
                                 <a className={styles.home__link}><Emoji symbol='🇺🇦' label='Ukraine' /> &nbsp; Zur Startseite</a>
                             </Link>
-                            <motion.div variants={textTransition} initial="hidden" animate="enter" exit="exit" className={styles.headline__wrapper}>
-                                {/* <span>Danke an:</span> */}
-                                <div className={styles.headline__name__nav}>
-                                    {/* Mobile prev arrow */}
+                            <AnimatePresence exitBeforeEnter={true}>
+                                <motion.div key={router.asPath} variants={textTransition} initial="hidden" animate="enter" exit="exit" className={styles.headline__wrapper}>
+                                    {/* <span>Danke an:</span> */}
+                                    <div className={styles.headline__name__nav}>
+                                        {/* Mobile prev arrow */}
+                                        {
+                                            participant.prevPage && <Arrow display='mobile' prev={participant.prevPage} />
+                                        }
+                                        <h1><Emoji symbol='💛' label='Yellow heart' /> Danke <Emoji symbol='💙' label='Blue heart' />
+                                            <br />
+                                            {participant.name}
+                                        </h1>
+                                        {/* Mobile next arrow with placeholder */}
+                                        <Arrow display='mobile' next={participant.nextPage} />
+                                    </div>
+                                </motion.div>
+                            </AnimatePresence>
+                            <AnimatePresence exitBeforeEnter={true}>
+                                <motion.div key={router.asPath} variants={textTransition} initial="hidden" animate="enter" exit="exit" className={styles.texts__wrapper}>
                                     {
-                                        participant.prevPage && <Arrow display='mobile' prev={participant.prevPage} />
+                                        participant.texts.map((text, index) => <div key={index} className={styles.text} dangerouslySetInnerHTML={{ __html: text }} />)
                                     }
-                                    <h1><Emoji symbol='💛' label='Yellow heart' /> Danke <Emoji symbol='💙' label='Blue heart' />
-                                        <br />
-                                        {participant.name}
-                                    </h1>
-                                    {/* Mobile next arrow with placeholder */}
-                                    <Arrow display='mobile' next={participant.nextPage} />
-                                </div>
-                            </motion.div>
-                            <motion.div variants={textTransition} initial="hidden" animate="enter" exit="exit" className={styles.texts__wrapper}>
-                                {
-                                    participant.texts.map((text, index) => <div key={index} className={styles.text} dangerouslySetInnerHTML={{ __html: text }} />)
-                                }
-                            </motion.div>
+                                </motion.div>
+                            </AnimatePresence>
                         </div>
                     </div>
 

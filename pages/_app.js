@@ -1,15 +1,12 @@
 import '../styles/globals.scss'
 import { Wave } from "../components/Wave";
-import { AnimatePresence } from "framer-motion";
 
-function MyApp({ Component, pageProps, router }) {
+function MyApp({ Component, pageProps }) {
     return (
         <>
-            <AnimatePresence exitBeforeEnter={true}  initial={false}>
-                <Component key={router.asPath} {...pageProps} />
-            </AnimatePresence>
+            <Component {...pageProps} />
 
-            {/* Wave */ }
+            {/* Wave */}
             <Wave />
         </>
     )
